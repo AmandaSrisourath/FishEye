@@ -1,0 +1,22 @@
+{
+  "name": "fisheye",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./src/sass/main.scss:./public/css/style.css",
+    "sass-prod": "sass ./src/sass/main.scss:./public/css/style.css --style compressed",
+    "prefix": "postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AmandaSrisourath/AmandaSrisourath_6_22022021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AmandaSrisourath/AmandaSrisourath_6_22022021/issues"
+  },
+  "homepage": "https://github.com/AmandaSrisourath/AmandaSrisourath_6_22022021#readme",
+  "browserslist": "last 4 versions"
+}
