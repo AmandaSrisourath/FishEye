@@ -1,6 +1,11 @@
 header {
   display: flex;
   align-items: center;
+  justify-content: space-around;
+}
+header h1 {
+  color: #901C1C;
+  font-size: 24px;
 }
 
 nav {
@@ -12,7 +17,13 @@ nav a {
   border: solid 1px #FAFAFA;
   border-radius: 32px 32px;
   padding: 8px;
-  margin-left: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+nav a:hover, nav a:focus {
+  color: white;
+  background: #901C1C;
+  outline: none;
 }
 
 /*# sourceMappingURL=main.css.map */
