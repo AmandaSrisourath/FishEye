@@ -1,9 +1,16 @@
 @import "utils/variables";
 
+body {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 48px;
   h1 {
     color: $color-primary;
     font-size: 24px;
@@ -12,6 +19,7 @@ header {
 
 nav {
   display: flex;
+  font-size: 14px;
   a {
     color: $color-primary;
     text-decoration: none;
@@ -24,6 +32,55 @@ nav {
       color: white;
       background: $color-primary;
       outline: none;
+    }
+  }
+}
+
+main {
+  .presentation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    a {
+      text-decoration: none;
+    }
+    .photograph {
+      width: fit-content;
+      text-align: center;
+      .portrait {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+      }
+      h2 {
+        color: $color-secondary;
+        font-size: 32px;
+        margin-bottom: 16px;
+      }
+      p {
+        font-size: 12px;
+      }
+      .location {
+        color: $color-primary;
+        font-size: 16px;
+        margin-bottom: 4px;
+      }
+      .description {
+        color: black;
+        margin-top: 0px;
+        margin-bottom: 2px;
+      }
+      .price {
+        color: darken($color-tertiary, 30);
+        margin-top: 2px;
+      }
+      a {
+        color: $color-primary;
+      }
     }
   }
 }

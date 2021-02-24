@@ -1,7 +1,14 @@
+body {
+  width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  margin-bottom: 48px;
 }
 header h1 {
   color: #901C1C;
@@ -10,6 +17,7 @@ header h1 {
 
 nav {
   display: flex;
+  font-size: 14px;
 }
 nav a {
   color: #901C1C;
@@ -24,6 +32,53 @@ nav a:hover, nav a:focus {
   color: white;
   background: #901C1C;
   outline: none;
+}
+
+main .presentation {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+main .presentation a {
+  text-decoration: none;
+}
+main .presentation .photograph {
+  width: fit-content;
+  text-align: center;
+}
+main .presentation .photograph .portrait {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+main .presentation .photograph h2 {
+  color: #D3573C;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+main .presentation .photograph p {
+  font-size: 12px;
+}
+main .presentation .photograph .location {
+  color: #901C1C;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+main .presentation .photograph .description {
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+main .presentation .photograph .price {
+  color: #aeaeae;
+  margin-top: 2px;
+}
+main .presentation .photograph a {
+  color: #901C1C;
 }
 
 /*# sourceMappingURL=main.css.map */
