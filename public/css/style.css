@@ -20,13 +20,14 @@ nav {
   font-size: 14px;
 }
 nav a {
+  font-size: 12px;
   color: #901C1C;
   text-decoration: none;
   border: solid 1px #FAFAFA;
   border-radius: 32px 32px;
-  padding: 8px;
-  margin-left: 8px;
-  margin-right: 8px;
+  padding: 0px 4px 2px 4px;
+  margin-left: 4px;
+  margin-right: 4px;
 }
 nav a:hover, nav a:focus {
   color: white;
@@ -58,7 +59,7 @@ main .presentation .photograph .portrait {
 main .presentation .photograph h2 {
   color: #D3573C;
   font-size: 32px;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
 }
 main .presentation .photograph p {
   font-size: 12px;
@@ -66,6 +67,7 @@ main .presentation .photograph p {
 main .presentation .photograph .location {
   color: #901C1C;
   font-size: 16px;
+  margin-top: 0px;
   margin-bottom: 4px;
 }
 main .presentation .photograph .description {
@@ -76,9 +78,22 @@ main .presentation .photograph .description {
 main .presentation .photograph .price {
   color: #aeaeae;
   margin-top: 2px;
+  margin-bottom: 2px;
 }
 main .presentation .photograph a {
+  font-size: 12px;
   color: #901C1C;
+  text-decoration: none;
+  border: solid 1px #FAFAFA;
+  border-radius: 32px 32px;
+  padding: 0px 4px 2px 4px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+main .presentation .photograph a:hover, main .presentation .photograph a:focus {
+  color: white;
+  background: #901C1C;
+  outline: none;
 }
 
 /*# sourceMappingURL=style.css.map */
