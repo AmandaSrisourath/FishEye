@@ -1,10 +1,12 @@
 @import "utils/variables";
 @import "utils/mixins";
+@import "base/fonts";
 
 body {
   width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  font-family: 'abelregular', Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -21,16 +23,17 @@ header {
 nav {
   display: flex;
   font-size: 14px;
-  a {
-    @include tag;
-  }
+}
+
+.tag {
+  @include tag;
 }
 
 main {
   .presentation {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     a {
       text-decoration: none;
     }
@@ -69,9 +72,6 @@ main {
         color: darken($color-tertiary, 30);
         margin-top: 2px;
         margin-bottom: 2px;
-      }
-      a {
-        @include tag;
       }
     }
   }

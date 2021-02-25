@@ -1,7 +1,15 @@
+@font-face {
+  font-family: "abelregular";
+  src: url("../abelFont/abel-regular-webfont.eot");
+  src: url("../abelFont/abel-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../abelFont/abel-regular-webfont.woff") format("woff"), url("../abelFont/abel-regular-webfont.ttf") format("truetype"), url("../abelFont/abel-regular-webfont.svg#abelregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   width: 1100px;
   margin-left: auto;
   margin-right: auto;
+  font-family: "abelregular", Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -19,7 +27,8 @@ nav {
   display: flex;
   font-size: 14px;
 }
-nav a {
+
+.tag {
   font-size: 12px;
   color: #901C1C;
   text-decoration: none;
@@ -29,7 +38,7 @@ nav a {
   margin-left: 4px;
   margin-right: 4px;
 }
-nav a:hover, nav a:focus {
+.tag:hover, .tag:focus {
   color: white;
   background: #901C1C;
   outline: none;
@@ -38,7 +47,7 @@ nav a:hover, nav a:focus {
 main .presentation {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 24px;
+  margin-bottom: 40px;
 }
 main .presentation a {
   text-decoration: none;
@@ -79,21 +88,6 @@ main .presentation .photograph .price {
   color: #aeaeae;
   margin-top: 2px;
   margin-bottom: 2px;
-}
-main .presentation .photograph a {
-  font-size: 12px;
-  color: #901C1C;
-  text-decoration: none;
-  border: solid 1px #FAFAFA;
-  border-radius: 32px 32px;
-  padding: 0px 4px 2px 4px;
-  margin-left: 4px;
-  margin-right: 4px;
-}
-main .presentation .photograph a:hover, main .presentation .photograph a:focus {
-  color: white;
-  background: #901C1C;
-  outline: none;
 }
 
 /*# sourceMappingURL=main.css.map */
