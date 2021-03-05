@@ -25,6 +25,9 @@ header {
 nav {
   display: flex;
   font-size: 14px;
+  .tag {
+    text-transform: capitalize;
+  }
 }
 
 .tag {

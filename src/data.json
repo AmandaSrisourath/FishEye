@@ -598,5 +598,7 @@
       "date": "2018-05-21",
       "price": 80
     }
-  ]
+  ],
+  
+  "tags": ["portrait", "art", "fashion", "architecture", "travel", "sport", "animals", "events"]
 }

@@ -28,6 +28,51 @@ photographers.forEach((photographer) => {
     document.getElementById('photographers').appendChild(div);
 });
 
+const tags = data.tags;
+
+tags.forEach((tag) => {
+    const nav = document.querySelector('#navigation');
+    const link = document.createElement('a');
+    link.classList.add("tag");
+    link.dataset.name = tag;
+    link.innerHTML = `#${tag}`
+    link.addEventListener('click', function(event) {
+        alert(tag);
+    });
+    nav.appendChild(link);
+});
+
+/*
 const tags = ['portrait', 'art', 'fashion', 'architecture', 'travel', 'sport', 'animals', 'events'];
 const result = tags.filter(tags => tags.length > 8);
-console.log(result);
+console.log(result);*/
+
+/*
+class Photograph {
+    name = ""
+    tags = []
+
+    constructor (tags, name) {
+        this.tags = tags;
+        this.name = name;
+    }
+}
+
+const photographers = [
+    new Photograph(['Art', 'Portraits'], 'Pierre'),
+    new Photograph(['Animaux', 'Portraits'], 'Paul'),
+    new Photograph(['Animaux', 'Art'], 'Jacques')
+]
+
+function filterByTag(tag) {
+    return photographers.filter(photograph => {
+        return photograph.tags.indexOf(tag) !== -1
+    })
+}
+
+const tags = document.querySelectorAll('.tag')
+for (const tag of tags) {
+    tag.addEventListener('click', function (e) {
+        console.log(filterByTag(e.target.dataset.name))
+    })
+}*/

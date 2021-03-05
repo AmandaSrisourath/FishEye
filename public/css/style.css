@@ -29,6 +29,9 @@ nav {
   display: flex;
   font-size: 14px;
 }
+nav .tag {
+  text-transform: capitalize;
+}
 
 .tag {
   font-size: 12px;
