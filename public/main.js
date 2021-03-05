@@ -73,12 +73,12 @@ tags.forEach((tag) => {
     link.dataset.name = tag;
     link.innerHTML = `#${tag}`
     link.addEventListener('click', function(event) {
-        filterAndCreateArtists(tag);
+        filterAndCreatePhotographers(tag);
     });
     nav.appendChild(link);
 });
 
-function filterAndCreateArtists(tag) {
+function filterAndCreatePhotographers(tag) {
     const photographersDiv = document.getElementById('photographers');
     photographersDiv.innerHTML = "";
 
@@ -90,7 +90,7 @@ function createPhotographers(photographers) {
     photographers.forEach((photographer) => {
         const div = document.createElement('div');
         div.classList.add("photograph");
-        div.innerHTML = `<a href="#">
+        div.innerHTML = `<a href="public/photographer-page.html">
                         <div>
                             <img class="profile-picture" src="public/portraitPicture/${photographer.portrait}" alt=""/>
                             <h2> ${photographer.name} </h2>
@@ -106,6 +106,9 @@ function createPhotographers(photographers) {
             const link = document.createElement('a');
             link.innerHTML = '#' + tag;
             link.classList.add("tag");
+            link.addEventListener('click', function(event) {
+                filterAndCreatePhotographers(tag);
+            });
             divTag.appendChild(link);
         });
         div.appendChild(divTag);
