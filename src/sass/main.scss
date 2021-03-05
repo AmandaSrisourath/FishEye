@@ -14,8 +14,8 @@ header {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 56px;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 102px;
+  margin-right: 108px;
   h1 {
     color: $color-primary;
     font-size: 32px;
@@ -37,16 +37,16 @@ nav {
 main {
   .presentation {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     a {
       text-decoration: none;
     }
     .photograph {
+      width: 230px;
       text-align: center;
       margin-bottom: 40px;
-      margin-left: 80px;
-      margin-right: 80px;
+      margin-left: 68px;
+      margin-right: 68px;
       .profile-picture {
         display: block;
         margin-left: auto;
