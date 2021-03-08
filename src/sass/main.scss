@@ -34,6 +34,10 @@ nav {
   @include tag;
 }
 
+.profile-picture {
+  @include profilPicture
+}
+
 main {
   .presentation {
     display: flex;
@@ -47,15 +51,6 @@ main {
       margin-bottom: 40px;
       margin-left: 68px;
       margin-right: 68px;
-      .profile-picture {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        object-fit: cover;
-      }
       h2 {
         color: $color-secondary;
         font-size: 32px;
@@ -84,6 +79,45 @@ main {
         display: flex;
         justify-content: center;
       }
+    }
+  }
+}
+
+/* photographer-page */
+
+#photographer-header {
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+#photographer-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 48px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: $color-tertiary;
+  #photographer-contact {
+    display: flex;
+    #photographer-name {
+      color: $color-secondary;
+    }
+    h1 {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 40px;
+    }
+    h2 {
+      color: $color-primary;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      font-size: 16px;
+    }
+    p {
+      margin-top: 0px;
+      margin-bottom: 8px;
+    }
+    #button {
+      @include contactButton;
     }
   }
 }

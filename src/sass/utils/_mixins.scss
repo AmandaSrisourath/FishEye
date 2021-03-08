@@ -10,7 +10,29 @@
   &:hover, &:focus {
     color: white;
     background: $color-primary;
-    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@mixin profilPicture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+@mixin contactButton {
+  color: white;
+  background-color: $color-primary;
+  border: none;
+  border-radius: 6px 6px;
+  padding: 14px 8px;
+  &:hover {
+    background-color: lighten($color-primary, 10);
     cursor: pointer;
   }
 }

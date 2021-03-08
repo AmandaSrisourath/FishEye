@@ -46,8 +46,18 @@ nav .tag {
 .tag:hover, .tag:focus {
   color: white;
   background: #901C1C;
-  outline: none;
+  border: none;
   cursor: pointer;
+}
+
+.profile-picture {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
 }
 
 main .presentation {
@@ -63,15 +73,6 @@ main .presentation .photograph {
   margin-bottom: 40px;
   margin-left: 68px;
   margin-right: 68px;
-}
-main .presentation .photograph .profile-picture {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
 }
 main .presentation .photograph h2 {
   color: #D3573C;
@@ -100,6 +101,53 @@ main .presentation .photograph .price {
 main .presentation .photograph .tag-all {
   display: flex;
   justify-content: center;
+}
+
+/* photographer-page */
+#photographer-header {
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+
+#photographer-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 48px;
+  margin-left: 100px;
+  margin-right: 100px;
+  background-color: #FAFAFA;
+}
+#photographer-navigation #photographer-contact {
+  display: flex;
+}
+#photographer-navigation #photographer-contact #photographer-name {
+  color: #D3573C;
+}
+#photographer-navigation #photographer-contact h1 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 40px;
+}
+#photographer-navigation #photographer-contact h2 {
+  color: #901C1C;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+#photographer-navigation #photographer-contact p {
+  margin-top: 0px;
+  margin-bottom: 8px;
+}
+#photographer-navigation #photographer-contact #button {
+  color: white;
+  background-color: #901C1C;
+  border: none;
+  border-radius: 6px 6px;
+  padding: 14px 8px;
+}
+#photographer-navigation #photographer-contact #button:hover {
+  background-color: #bb2424;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */
