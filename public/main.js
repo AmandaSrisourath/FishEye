@@ -115,6 +115,8 @@ function createPhotographers(photographers) {
         document.getElementById('photographers').appendChild(div);
     });
 }
+
+
 }();
 /******/ })()
 ;

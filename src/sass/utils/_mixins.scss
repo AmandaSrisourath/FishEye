@@ -31,6 +31,7 @@
   border: none;
   border-radius: 6px 6px;
   padding: 14px 8px;
+  outline: none;
   &:hover {
     background-color: lighten($color-primary, 10);
     cursor: pointer;

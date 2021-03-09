@@ -115,6 +115,7 @@ main .presentation .photograph .tag-all {
   padding: 24px 48px;
   margin-left: 100px;
   margin-right: 100px;
+  margin-bottom: 16px;
   background-color: #FAFAFA;
 }
 #photographer-navigation #photographer-contact {
@@ -144,10 +145,91 @@ main .presentation .photograph .tag-all {
   border: none;
   border-radius: 6px 6px;
   padding: 14px 8px;
+  outline: none;
 }
 #photographer-navigation #photographer-contact #button:hover {
   background-color: #bb2424;
   cursor: pointer;
+}
+
+#photographer-main {
+  margin-left: 100px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  border: none;
+  padding-right: 32px;
+  padding-left: 2px;
+  margin-bottom: 48px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #901C1C;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 4px 4px;
+  left: 90px;
+  top: -8px;
+}
+.dropdown-content .underline {
+  padding-bottom: 16px;
+  border-bottom: solid 2px #FAFAFA;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #bb2424;
+  border-radius: 4px 4px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: white;
+  cursor: pointer;
+}
+
+#all-album {
+  display: flex;
+  flex-wrap: wrap;
+}
+#all-album .album {
+  margin-right: 76px;
+  margin-bottom: 8px;
+}
+#all-album .album .image {
+  width: 250px;
+  height: 250px;
+  border-radius: 4px 4px;
+}
+#all-album .album .image-description {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  color: #901C1C;
+}
+#all-album .album .image-description p, #all-album .album .image-description .fa-heart {
+  font-size: 20px;
+  margin-top: 4px;
 }
 
 /*# sourceMappingURL=main.css.map */
