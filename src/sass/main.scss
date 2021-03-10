@@ -87,7 +87,6 @@ main {
 
 #photographer-header {
   margin-top: 28px;
-  margin-bottom: 24px;
 }
 #photographer-navigation {
   display: flex;
@@ -110,7 +109,7 @@ main {
     h2 {
       color: $color-primary;
       margin-top: 8px;
-      margin-bottom: 8px;
+      margin-bottom: 16px;
       font-size: 16px;
     }
     p {
@@ -125,6 +124,7 @@ main {
 
 #photographer-main {
   margin-left: 100px;
+  margin-right: 22px;
 }
 
 .dropdown {
@@ -176,7 +176,6 @@ main {
   cursor: pointer;
 }
 
-
 #all-album {
   display: flex;
   flex-wrap: wrap;
@@ -198,5 +197,26 @@ main {
         margin-top: 4px;
       }
     }
+  }
+}
+
+#photographer-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: lighten($color-secondary, 10);
+  width: 270px;
+  font-size: 20px;
+  border-radius: 4px 4px;
+  margin-left: auto;
+  margin-right: 24px;
+  position: sticky;
+  bottom: 0px;
+  #like {
+    display: flex;
+  }
+  .fa-heart {
+    margin-top: 24px;
+    font-size: 16px;
   }
 }
