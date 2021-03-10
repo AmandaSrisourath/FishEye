@@ -24,7 +24,8 @@
   object-fit: cover;
 }
 
-@mixin contactButton {
+@mixin button {
+  width: 110px;
   color: white;
   background-color: $color-primary;
   border: none;

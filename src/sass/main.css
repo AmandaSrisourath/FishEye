@@ -137,7 +137,8 @@ main .presentation .photograph .tag-all {
   margin-top: 0px;
   margin-bottom: 8px;
 }
-#photographer-navigation #photographer-contact #button {
+#photographer-navigation #photographer-contact .button {
+  width: 110px;
   color: white;
   background-color: #901C1C;
   border: none;
@@ -145,7 +146,7 @@ main .presentation .photograph .tag-all {
   padding: 14px 8px;
   outline: none;
 }
-#photographer-navigation #photographer-contact #button:hover {
+#photographer-navigation #photographer-contact .button:hover {
   color: black;
   background-color: #dc7b66;
   cursor: pointer;
@@ -178,7 +179,7 @@ main .presentation .photograph .tag-all {
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
-  border-radius: 4px 4px;
+  border-radius: 4px;
   left: 90px;
   top: -8px;
 }
@@ -196,7 +197,7 @@ main .presentation .photograph .tag-all {
 
 .dropdown-content a:hover {
   background-color: #bb2424;
-  border-radius: 4px 4px;
+  border-radius: 4px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -219,7 +220,7 @@ main .presentation .photograph .tag-all {
 #all-album .album .image {
   width: 250px;
   height: 250px;
-  border-radius: 4px 4px;
+  border-radius: 4px;
 }
 #all-album .album .image-description {
   display: flex;
@@ -239,7 +240,7 @@ main .presentation .photograph .tag-all {
   background-color: #dc7b66;
   width: 270px;
   font-size: 20px;
-  border-radius: 4px 4px;
+  border-radius: 4px;
   margin-left: auto;
   margin-right: 24px;
   position: sticky;
@@ -251,6 +252,71 @@ main .presentation .photograph .tag-all {
 #photographer-detail .fa-heart {
   margin-top: 24px;
   font-size: 16px;
+}
+
+#bground {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(250, 250, 250, 0.4);
+}
+#bground #form-modal {
+  width: 400px;
+  height: auto;
+  background-color: #dc7b66;
+  padding: 16px 24px;
+  border-radius: 4px;
+  margin: 5% auto;
+}
+#bground #form-modal #contact-close {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+#bground #form-modal #contact-close h1 {
+  margin: 0px;
+  font-size: 40px;
+}
+#bground #form-modal #contact-close .fa-times {
+  margin-top: 8px;
+  color: white;
+  font-size: 40px;
+}
+#bground #form-modal .formulaire {
+  display: flex;
+  flex-direction: column;
+}
+#bground #form-modal .formulaire label {
+  font-size: 24px;
+}
+#bground #form-modal input {
+  border: none;
+  height: 40px;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+#bground #form-modal #message {
+  height: 120px;
+  margin-bottom: 16px;
+}
+#bground #form-modal .button {
+  width: 110px;
+  color: white;
+  background-color: #901C1C;
+  border: none;
+  border-radius: 6px 6px;
+  padding: 14px 8px;
+  outline: none;
+}
+#bground #form-modal .button:hover {
+  color: black;
+  background-color: #dc7b66;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=main.css.map */

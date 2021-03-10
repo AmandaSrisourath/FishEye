@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div>
-                <input type="button" value="Contactez-moi" id="button" role="button">
+                <input type="button" value="Contactez-moi" id="contact-btn" class="button" role="button">
             </div>
         </div>
         <div>
@@ -40,7 +40,7 @@
 
     <main id="photographer-main" role="main">
         <div class="dropdown">
-            <button onclick="myFunction()" class="dropbtn">Trier par</button>
+            <button class="dropbtn">Trier par</button>
             <div id="myDropdown" class="dropdown-content">
                 <a class="underline" href="#popularité">Popularité</a>
                 <a class="underline" href="#date">Date</a>
@@ -107,6 +107,40 @@
             <p>300€ / jour</p>
         </div>
     </main>
+
+    <div id="bground">
+        <div id="form-modal">
+            <div id="contact-close">
+                <div>
+                    <h1>Contactez-moi</h1>
+                    <h1>Mimi Keel</h1>
+                </div>
+                <i class="fas fa-times"></i>
+            </div>
+
+            <form>
+                <div class="formulaire">
+                    <label for="name">Prénom</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="formulaire">
+                    <label for="last-name">Nom</label>
+                    <input type="text" name="last-name" id="last-name" required>
+                </div>
+                <div class="formulaire">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="formulaire">
+                    <label for="message">Votre message</label>
+                    <input type="textarea" name="message" id="message" required>
+                </div>
+                <div class="formulaire">
+                    <input type="submit" value="Envoyer" class="button">
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="main.js"></script>
 </body>
