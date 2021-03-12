@@ -30,8 +30,8 @@ function createPhotographers(photographers) {
     photographers.forEach((photographer) => {
         const div = document.createElement('div');
         div.classList.add("photograph");
-        div.innerHTML = `<a href="public/photographer-page.html">
-                        <div>
+        div.innerHTML = `<a href="public/photographer-page.html?id=${photographer.id}">
+                        <div role="img" aria-label="Mimi Keel">
                             <img class="profile-picture" src="public/portraitPicture/${photographer.portrait}" alt=""/>
                             <h2> ${photographer.name} </h2>
                         </div>

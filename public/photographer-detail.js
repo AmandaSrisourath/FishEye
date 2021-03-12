@@ -53,69 +53,32 @@ module.exports = JSON.parse('{"photographers":[{"name":"Mimi Keel","id":243,"cit
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 !function() {
-/*!*********************!*\
-  !*** ./src/main.js ***!
-  \*********************/
+/*!************************************!*\
+  !*** ./src/photographer-detail.js ***!
+  \************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data.json */ "./src/data.json");
 
 console.log(_data_json__WEBPACK_IMPORTED_MODULE_0__);
 
+const queryString = window.location.search;
+console.log(queryString);
+
+const urlParams = new URLSearchParams(queryString);
+
+const id = urlParams.get('id')
+console.log(id);
+
 const photographers = _data_json__WEBPACK_IMPORTED_MODULE_0__.photographers;
 
-createPhotographers(photographers);
-const tags = _data_json__WEBPACK_IMPORTED_MODULE_0__.tags;
+const foundPhotographerId = photographers.find(photographer => photographer.id === parseInt(id, 10));
+console.log(foundPhotographerId);
 
-tags.forEach((tag) => {
-    const nav = document.querySelector('#navigation');
-    const link = document.createElement('a');
-    link.classList.add("tag");
-    link.dataset.name = tag;
-    link.innerHTML = `#${tag}`
-    link.addEventListener('click', function(event) {
-        filterAndCreatePhotographers(tag);
-    });
-    nav.appendChild(link);
-});
 
-function filterAndCreatePhotographers(tag) {
-    const photographersDiv = document.getElementById('photographers');
-    photographersDiv.innerHTML = "";
 
-    const photographersFiltered = photographers.filter((artist) => artist.tags.includes(tag));
-    createPhotographers(photographersFiltered);
-}
 
-function createPhotographers(photographers) {
-    photographers.forEach((photographer) => {
-        const div = document.createElement('div');
-        div.classList.add("photograph");
-        div.innerHTML = `<a href="public/photographer-page.html?id=${photographer.id}">
-                        <div role="img" aria-label="Mimi Keel">
-                            <img class="profile-picture" src="public/portraitPicture/${photographer.portrait}" alt=""/>
-                            <h2> ${photographer.name} </h2>
-                        </div>
-                     </a>
-                     <div>
-                        <p class="location"> ${photographer.city}, ${photographer.country} </p>
-                        <p class="slogan"> ${photographer.tagline} </p>
-                        <p class="price"> ${photographer.price}€/jour </p>
-                     </div>`
-        const divTag = document.createElement('div');
-        photographer.tags.forEach((tag) => {
-            const link = document.createElement('a');
-            link.innerHTML = '#' + tag;
-            link.classList.add("tag");
-            link.addEventListener('click', function(event) {
-                filterAndCreatePhotographers(tag);
-            });
-            divTag.appendChild(link);
-        });
-        div.appendChild(divTag);
-        document.getElementById('photographers').appendChild(div);
-    });
-}
+
 }();
 /******/ })()
 ;
-//# sourceMappingURL=main.js.map
+//# sourceMappingURL=photographer-detail.js.map

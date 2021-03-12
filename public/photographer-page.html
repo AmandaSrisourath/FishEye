@@ -30,7 +30,7 @@
                 </div>
             </div>
             <div>
-                <input type="button" value="Contactez-moi" id="contact-btn" class="button" role="button">
+                <input type="button" value="Contactez-moi" id="contact-btn" class="button" role="button" aria-pressed="false">
             </div>
         </div>
         <div>
@@ -39,14 +39,13 @@
     </nav>
 
     <main id="photographer-main" role="main">
-        <div class="dropdown">
-            <button class="dropbtn">Trier par</button>
-            <div id="myDropdown" class="dropdown-content">
-                <a class="underline" href="#popularité">Popularité</a>
-                <a class="underline" href="#date">Date</a>
-                <a href="#titre">Titre</a>
-            </div>
-        </div>
+
+        <label for="pet-select">Trier par</label>
+        <select name="pets" id="pet-select">
+            <option value="popularity">Popularité</option>
+            <option value="date">Date</option>
+            <option value="title">Titre</option>
+        </select>
 
         <div id="all-album">
             <div class="album">
@@ -115,7 +114,9 @@
                     <h1>Contactez-moi</h1>
                     <h1>Mimi Keel</h1>
                 </div>
-                <i class="fas fa-times"></i>
+                <div class="close-action">
+                    <i class="fas fa-times icon"></i>
+                </div>
             </div>
 
             <form>
@@ -142,6 +143,29 @@
         </div>
     </div>
 
-    <script src="main.js"></script>
+    <div id="image-modal">
+        <div>
+            <i class="fas fa-chevron-left icon"></i>
+        </div>
+
+        <div id="image-description">
+            <img class="big-image" src="./SamplePhotos/Mimi/Animals_Rainbow.jpg"/>
+            <p>Arc-en-ciel</p>
+        </div>
+
+        <div>
+            <div class="close-action">
+                <i class="fas fa-times icon"></i>
+            </div>
+
+            <div>
+                <i class="fas fa-chevron-right icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <script src="modal.js"></script>
+    <script src="photographer-detail.js"></script>
+
 </body>
 </html>
