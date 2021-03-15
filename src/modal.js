@@ -10,12 +10,6 @@ function launchModal() {
     modalbg.style.display = "block";
 }
 
-/*modalImageBtn.forEach((btn) => btn.addEventListener("click", launchImageModal));
-
-function launchImageModal() {
-    modalbg.style.display = "block";
-}*/
-
 closeModalBtn.forEach((elt) => elt.addEventListener("click", closeModal));
 
 function closeModal() {

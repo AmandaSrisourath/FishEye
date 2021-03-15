@@ -36,12 +36,32 @@
 
     <main id="photographer-main" role="main">
 
-        <label for="pet-select">Trier par</label>
-        <select name="pets" id="pet-select">
-            <option value="popularity">Popularité</option>
-            <option value="date">Date</option>
-            <option value="title">Titre</option>
-        </select>
+       <div id="select-menu">
+           <div>
+               <p>Trier par</p>
+           </div>
+
+           <div class="select-box">
+               <div class="select-box__current" tabindex="1">
+                   <div class="select-box__value"><input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked" />
+                       <p class="select-box__input-text">Popularité</p>
+                   </div>
+                   <div class="select-box__value"><input class="select-box__input" type="radio" id="1" value="2" name="Ben" />
+                       <p class="select-box__input-text">Date</p>
+                   </div>
+                   <div class="select-box__value"><input class="select-box__input" type="radio" id="2" value="3" name="Ben" />
+                       <p class="select-box__input-text">Titre</p>
+                   </div>
+
+                   <i class="fas fa-chevron-down"></i>
+               </div>
+               <ul class="select-box__list">
+                   <li><label class="select-box__option" for="0" aria-hidden="aria-hidden">Popularité</label></li>
+                   <li><label class="select-box__option" for="1" aria-hidden="aria-hidden">Date</label></li>
+                   <li><label class="select-box__option" for="2" aria-hidden="aria-hidden">Titre</label></li>
+               </ul>
+           </div>
+       </div>
 
         <div id="all-album">
             <div class="album">
