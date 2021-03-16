@@ -59,20 +59,16 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data.json */ "./src/data.json");
 
-console.log(_data_json__WEBPACK_IMPORTED_MODULE_0__);
 
 const queryString = window.location.search;
-console.log(queryString);
 
 const urlParams = new URLSearchParams(queryString);
 
 const id = urlParams.get('id')
-console.log(id);
 
 const photographers = _data_json__WEBPACK_IMPORTED_MODULE_0__.photographers;
 
 const foundPhotographer = photographers.find(photographer => photographer.id === parseInt(id, 10));
-console.log(foundPhotographer);
 
 const photographerName = document.querySelector('#photographer-name');
 photographerName.innerHTML = foundPhotographer.name;

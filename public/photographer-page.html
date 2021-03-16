@@ -43,22 +43,25 @@
 
            <div class="select-box">
                <div class="select-box__current" tabindex="1">
-                   <div class="select-box__value"><input class="select-box__input" type="radio" id="0" value="1" name="Ben" checked="checked" />
+                   <div class="select-box__value">
+                       <input class="select-box__input" type="radio" id="popularity" value="popularity" name="filter" checked="checked" />
                        <p class="select-box__input-text">Popularité</p>
                    </div>
-                   <div class="select-box__value"><input class="select-box__input" type="radio" id="1" value="2" name="Ben" />
+                   <div class="select-box__value">
+                       <input class="select-box__input" type="radio" id="date" value="date" name="filter" />
                        <p class="select-box__input-text">Date</p>
                    </div>
-                   <div class="select-box__value"><input class="select-box__input" type="radio" id="2" value="3" name="Ben" />
+                   <div class="select-box__value">
+                       <input class="select-box__input" type="radio" id="title" value="title" name="filter" />
                        <p class="select-box__input-text">Titre</p>
                    </div>
 
                    <i class="fas fa-chevron-down"></i>
                </div>
                <ul class="select-box__list">
-                   <li><label class="select-box__option" for="0" aria-hidden="aria-hidden">Popularité</label></li>
-                   <li><label class="select-box__option" for="1" aria-hidden="aria-hidden">Date</label></li>
-                   <li><label class="select-box__option" for="2" aria-hidden="aria-hidden">Titre</label></li>
+                   <li><label class="select-box__option" for="popularity" aria-hidden="aria-hidden">Popularité</label></li>
+                   <li><label class="select-box__option" for="date" aria-hidden="aria-hidden">Date</label></li>
+                   <li><label class="select-box__option" for="title" aria-hidden="aria-hidden">Titre</label></li>
                </ul>
            </div>
        </div>
@@ -180,8 +183,62 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="column">
+            <img src="./SamplePhotos/Mimi/Animals_Rainbow.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
+        </div>
+        <div class="column">
+            <img src="./SamplePhotos/Mimi/Travel_Lonesome.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
+        </div>
+        <div class="column">
+            <img src="./SamplePhotos/Mimi/Event_SeasideWedding.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
+        </div>
+        <div class="column">
+            <img src="./SamplePhotos/Mimi/Portrait_Background.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
+        </div>
+        <div class="column">
+            <img src="./SamplePhotos/Mimi/Event_PintoWedding.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
+        </div>
+        <div class="column">
+            <img src="./SamplePhotos/Mimi/Portrait_Wednesday.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span id="close-lightbox" class="close cursor" >&times;</span>
+        <div class="modal-content">
+
+            <div class="mySlides">
+                <img src="./SamplePhotos/Mimi/Animals_Rainbow.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="./SamplePhotos/Mimi/Travel_Lonesome.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="./SamplePhotos/Mimi/Event_SeasideWedding.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="./SamplePhotos/Mimi/Portrait_Background.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="./SamplePhotos/Mimi/Event_PintoWedding.jpg" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <img src="./SamplePhotos/Mimi/Portrait_Wednesday.jpg" style="width:100%">
+            </div>
+
+            <a id="prev-image" class="prev">&#10094;</a>
+            <a id="next-image" class="next">&#10095;</a>
+
+        </div>
+    </div>
+
     <script src="modal.js"></script>
     <script src="photographer-detail.js"></script>
-
 </body>
 </html>

@@ -166,11 +166,6 @@ main .presentation .photograph .tag-all {
   margin-right: 76px;
   margin-bottom: 8px;
 }
-#all-album .album .image {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
-}
 #all-album .album .image-description {
   display: flex;
   justify-content: space-between;
@@ -180,6 +175,12 @@ main .presentation .photograph .tag-all {
 #all-album .album .image-description p, #all-album .album .image-description .fa-heart {
   font-size: 20px;
   margin-top: 4px;
+}
+
+.image {
+  width: 250px;
+  height: 250px;
+  border-radius: 4px;
 }
 
 #photographer-detail {
@@ -302,7 +303,6 @@ main .presentation .photograph .tag-all {
   font-size: 16px;
   color: white;
   margin-left: 16px;
-  border-radius: 4px;
 }
 .select-box__current {
   position: relative;
@@ -337,6 +337,7 @@ main .presentation .photograph .tag-all {
 }
 .select-box__input:checked + .select-box__input-text {
   display: block;
+  border-radius: 4px 4px 0px 0px;
 }
 .select-box__input-text {
   display: none;
@@ -359,6 +360,9 @@ main .presentation .photograph .tag-all {
   animation-timing-function: step-start;
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
 }
+.select-box__list li:last-of-type label {
+  border-radius: 0px 0px 4px 4px;
+}
 .select-box__option {
   display: block;
   padding: 15px;
@@ -376,6 +380,96 @@ main .presentation .photograph .tag-all {
   to {
     transform: scaleY(0);
   }
+}
+* {
+  box-sizing: border-box;
+}
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: black;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -50px;
+  color: black;
+  font-weight: bold;
+  font-size: 32px;
+  transition: 0.6s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: -32px;
+}
+
+.prev {
+  left: -32px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -59,7 +59,6 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data.json */ "./src/data.json");
 
-console.log(_data_json__WEBPACK_IMPORTED_MODULE_0__);
 
 const photographers = _data_json__WEBPACK_IMPORTED_MODULE_0__.photographers;
 
