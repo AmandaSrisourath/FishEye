@@ -30,13 +30,13 @@
             </div>
         </div>
         <div>
-            <img class="profile-picture"/>
+            <img class="profile-picture" role="img" aria-label="Photo de profile"/>
         </div>
     </nav>
 
     <main id="photographer-main" role="main">
 
-       <div id="select-menu">
+       <div id="select-menu" role="navigation" aria-label="Filter">
            <div>
                <p>Trier par</p>
            </div>
@@ -66,54 +66,93 @@
            </div>
        </div>
 
-        <div id="all-album">
-            <div class="album">
-                <img class="image" src="./SamplePhotos/Mimi/Animals_Rainbow.jpg"/>
+        <div id="all-album" class="row">
+            <div class="column album">
+                <img src="./SamplePhotos/Mimi/Animals_Rainbow.jpg" class="hover-shadow open-lightbox image" role="img" aria-label="Oiseau">
                 <div class="image-description">
                     <p>Arc-en-ciel</p>
                     <p>70€</p>
                     <i class="fas fa-heart"></i>
                 </div>
             </div>
-            <div class="album">
-                <img class="image" src="./SamplePhotos/Mimi/Animals_Rainbow.jpg"/>
+            <div class="column album">
+                <img src="./SamplePhotos/Mimi/Travel_Lonesome.jpg" class="hover-shadow open-lightbox image" role="img" aria-label="Forêt">
                 <div class="image-description">
                     <p>Arc-en-ciel</p>
                     <p>70€</p>
                     <i class="fas fa-heart"></i>
                 </div>
             </div>
-            <div class="album">
-                <img class="image" src="./SamplePhotos/Mimi/Animals_Rainbow.jpg"/>
+            <div class="column album">
+                <img src="./SamplePhotos/Mimi/Event_SeasideWedding.jpg" class="hover-shadow open-lightbox image" role="img" aria-label="Restaurant">
                 <div class="image-description">
                     <p>Arc-en-ciel</p>
                     <p>70€</p>
                     <i class="fas fa-heart"></i>
                 </div>
             </div>
-            <div class="album">
-                <img class="image" src="./SamplePhotos/Mimi/Animals_Rainbow.jpg"/>
+            <div class="column album">
+                <img src="./SamplePhotos/Mimi/Portrait_Background.jpg" class="hover-shadow open-lightbox image" role="img" aria-label="Model adulte">
                 <div class="image-description">
                     <p>Arc-en-ciel</p>
                     <p>70€</p>
                     <i class="fas fa-heart"></i>
                 </div>
             </div>
-            <div class="album">
-                <img class="image" src="./SamplePhotos/Mimi/Animals_Rainbow.jpg"/>
+            <div class="column album">
+                <img src="./SamplePhotos/Mimi/Event_PintoWedding.jpg" class="hover-shadow open-lightbox image" role="img" aria-label="Mariage">
                 <div class="image-description">
                     <p>Arc-en-ciel</p>
                     <p>70€</p>
                     <i class="fas fa-heart"></i>
                 </div>
             </div>
-            <div class="album">
-                <img class="image" src="./SamplePhotos/Mimi/Animals_Rainbow.jpg"/>
+            <div class="column album">
+                <img src="./SamplePhotos/Mimi/Portrait_Wednesday.jpg" class="hover-shadow open-lightbox image" role="img" aria-label="Model enfant">
                 <div class="image-description">
                     <p>Arc-en-ciel</p>
                     <p>70€</p>
                     <i class="fas fa-heart"></i>
                 </div>
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <span id="close-lightbox" class="close cursor" >&times;</span>
+<!--        <span><i id="close-lightbox" class="fas fa-times close cursor close-action"></i></span>-->
+            <div class="modal-content">
+                <div class="mySlides">
+                    <img class="big-image" src="./SamplePhotos/Mimi/Animals_Rainbow.jpg">
+                    <p>Arc-en-ciel</p>
+                </div>
+
+                <div class="mySlides">
+                    <img class="big-image" src="./SamplePhotos/Mimi/Travel_Lonesome.jpg">
+                    <p>Arc-en-ciel</p>
+                </div>
+
+                <div class="mySlides">
+                    <img class="big-image" src="./SamplePhotos/Mimi/Event_SeasideWedding.jpg">
+                    <p>Arc-en-ciel</p>
+                </div>
+
+                <div class="mySlides">
+                    <img class="big-image" src="./SamplePhotos/Mimi/Portrait_Background.jpg">
+                    <p>Arc-en-ciel</p>
+                </div>
+
+                <div class="mySlides">
+                    <img class="big-image" src="./SamplePhotos/Mimi/Event_PintoWedding.jpg">
+                    <p>Arc-en-ciel</p>
+                </div>
+
+                <div class="mySlides">
+                    <img class="big-image" src="./SamplePhotos/Mimi/Portrait_Wednesday.jpg">
+                    <p>Arc-en-ciel</p>
+                </div>
+
+                <a id="prev-image" class="prev">&#10094;</a>
+                <a id="next-image" class="next">&#10095;</a>
             </div>
         </div>
 
@@ -138,7 +177,7 @@
                 </div>
             </div>
 
-            <form>
+            <form role="form" aria-label="Contact information">
                 <div class="formulaire">
                     <label for="name">Prénom</label>
                     <input type="text" name="name" id="name" required>
@@ -159,82 +198,6 @@
                     <input type="submit" value="Envoyer" class="button">
                 </div>
             </form>
-        </div>
-    </div>
-
-    <div id="image-modal">
-        <div>
-            <i class="fas fa-chevron-left icon"></i>
-        </div>
-
-        <div id="image-description">
-            <img class="big-image" src="./SamplePhotos/Mimi/Animals_Rainbow.jpg"/>
-            <p>Arc-en-ciel</p>
-        </div>
-
-        <div>
-            <div class="close-action">
-                <i class="fas fa-times icon"></i>
-            </div>
-
-            <div>
-                <i class="fas fa-chevron-right icon"></i>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="column">
-            <img src="./SamplePhotos/Mimi/Animals_Rainbow.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
-        </div>
-        <div class="column">
-            <img src="./SamplePhotos/Mimi/Travel_Lonesome.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
-        </div>
-        <div class="column">
-            <img src="./SamplePhotos/Mimi/Event_SeasideWedding.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
-        </div>
-        <div class="column">
-            <img src="./SamplePhotos/Mimi/Portrait_Background.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
-        </div>
-        <div class="column">
-            <img src="./SamplePhotos/Mimi/Event_PintoWedding.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
-        </div>
-        <div class="column">
-            <img src="./SamplePhotos/Mimi/Portrait_Wednesday.jpg" style="width:100%" class="hover-shadow cursor open-lightbox">
-        </div>
-    </div>
-
-    <div id="myModal" class="modal">
-        <span id="close-lightbox" class="close cursor" >&times;</span>
-        <div class="modal-content">
-
-            <div class="mySlides">
-                <img src="./SamplePhotos/Mimi/Animals_Rainbow.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="./SamplePhotos/Mimi/Travel_Lonesome.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="./SamplePhotos/Mimi/Event_SeasideWedding.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="./SamplePhotos/Mimi/Portrait_Background.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="./SamplePhotos/Mimi/Event_PintoWedding.jpg" style="width:100%">
-            </div>
-
-            <div class="mySlides">
-                <img src="./SamplePhotos/Mimi/Portrait_Wednesday.jpg" style="width:100%">
-            </div>
-
-            <a id="prev-image" class="prev">&#10094;</a>
-            <a id="next-image" class="next">&#10095;</a>
-
         </div>
     </div>
 

@@ -36,10 +36,14 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 const prevSlide = document.querySelector("#prev-image");
-prevSlide.addEventListener("click",(plusSlides));
+prevSlide.addEventListener("click", lessSlides(-1));
 
 const nextSlide = document.querySelector("#next-image");
-nextSlide.addEventListener("click",(plusSlides));
+nextSlide.addEventListener("click", plusSlides(1));
+
+function lessSlides(n) {
+    showSlides(slideIndex -= n);
+}
 
 function plusSlides(n) {
     showSlides(slideIndex += n);

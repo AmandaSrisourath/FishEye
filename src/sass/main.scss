@@ -134,7 +134,12 @@ main {
   .album {
     margin-right: 76px;
     margin-bottom: 8px;
-
+    .image {
+      width: 250px;
+      height: 250px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
     .image-description {
       display: flex;
       justify-content: space-between;
@@ -146,12 +151,6 @@ main {
       }
     }
   }
-}
-
-.image {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
 }
 
 #photographer-detail {
@@ -237,22 +236,6 @@ main {
   font-size: 40px;
 }
 
-#image-modal {
-  display: none;
-  justify-content: center;
-  color: $color-primary;
-  object-fit: cover;
-  #image-description {
-    padding: 0px 24px;
-    .big-image {
-      width: 800px;
-      height: 600px;
-      border-radius: 4px;
-      box-shadow: 4px 0px lighten($dark-grey, 40);
-    }
-  }
-}
-
 // menu-nav
 #select-menu {
   display: flex;
@@ -276,16 +259,11 @@ main {
     &:focus {
       & + .select-box__list {
         opacity: 1;
-
-        // We have to set "animation-name: none;" to make the list visible (read below how it works)
-
         animation-name: none;
-
         .select-box__option {
           cursor: pointer;
         }
       }
-
       .fa-chevron-down {
         transform: translateY(-50%) rotate(180deg);
       }
@@ -333,11 +311,6 @@ main {
     li:last-of-type label{
       border-radius: 0px 0px 4px 4px;
     }
-
-    // We need to use animation with delay.
-    // Otherwise the click event will not have time to run on label, because this element disapears immediately when .select-box__current element loses the focus.
-    // This delay will not be noticed because we set "opacity" to "0".
-    // We also use "animation-fill-mode: forwards" to make the list stay hidden.
 
     animation-name: HideList;
     animation-duration: 0.5s;
@@ -389,12 +362,11 @@ main {
   width: 25%;
 }
 
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 40px;
   left: 0;
   top: 0;
   width: 100%;
@@ -403,7 +375,6 @@ main {
   background-color: white;
 }
 
-/* Modal Content */
 .modal-content {
   position: relative;
   background-color: #fefefe;
@@ -411,48 +382,48 @@ main {
   padding: 0;
   width: 80%;
   max-width: 1200px;
+  .big-image {
+    width: 100%;
+    border-radius: 4px;
+    box-shadow: 4px 0px darken($color-tertiary, 20);
+  }
 }
 
-/* The Close Button */
 .close {
-  color: black;
+  color: $color-primary;
   position: absolute;
-  top: 10px;
-  right: 40px;
+  top: 30px;
+  right: 64px;
   font-size: 32px;
   font-weight: bold;
-}
-
-.close:hover, .close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
+  &:hover, &:focus {
+    color: $color-secondary;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .mySlides {
   display: none;
+  p {
+    margin-top: 0px;
+    color: $color-primary;
+  }
 }
 
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   margin-top: -50px;
-  color: black;
-  font-weight: bold;
+  color: $color-primary;
   font-size: 32px;
-  transition: 0.6s ease;
-  user-select: none;
-  -webkit-user-select: none;
+  &:hover, focus {
+    color: $color-secondary;
+  }
 }
 
-/* Position the "next button" to the right */
 .next {
   right: -32px;
 }

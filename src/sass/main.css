@@ -166,6 +166,12 @@ main .presentation .photograph .tag-all {
   margin-right: 76px;
   margin-bottom: 8px;
 }
+#all-album .album .image {
+  width: 250px;
+  height: 250px;
+  border-radius: 4px;
+  cursor: pointer;
+}
 #all-album .album .image-description {
   display: flex;
   justify-content: space-between;
@@ -175,12 +181,6 @@ main .presentation .photograph .tag-all {
 #all-album .album .image-description p, #all-album .album .image-description .fa-heart {
   font-size: 20px;
   margin-top: 4px;
-}
-
-.image {
-  width: 250px;
-  height: 250px;
-  border-radius: 4px;
 }
 
 #photographer-detail {
@@ -273,22 +273,6 @@ main .presentation .photograph .tag-all {
 
 .icon {
   font-size: 40px;
-}
-
-#image-modal {
-  display: none;
-  justify-content: center;
-  color: #901C1C;
-  object-fit: cover;
-}
-#image-modal #image-description {
-  padding: 0px 24px;
-}
-#image-modal #image-description .big-image {
-  width: 800px;
-  height: 600px;
-  border-radius: 4px;
-  box-shadow: 4px 0px #b8b8b8;
 }
 
 #select-menu {
@@ -400,12 +384,11 @@ main .presentation .photograph .tag-all {
   width: 25%;
 }
 
-/* The Modal (background) */
 .modal {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 100px;
+  padding-top: 40px;
   left: 0;
   top: 0;
   width: 100%;
@@ -414,7 +397,6 @@ main .presentation .photograph .tag-all {
   background-color: white;
 }
 
-/* Modal Content */
 .modal-content {
   position: relative;
   background-color: #fefefe;
@@ -423,19 +405,22 @@ main .presentation .photograph .tag-all {
   width: 80%;
   max-width: 1200px;
 }
+.modal-content .big-image {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 4px 0px #c7c7c7;
+}
 
-/* The Close Button */
 .close {
-  color: black;
+  color: #901C1C;
   position: absolute;
-  top: 10px;
-  right: 40px;
+  top: 30px;
+  right: 64px;
   font-size: 32px;
   font-weight: bold;
 }
-
 .close:hover, .close:focus {
-  color: #999;
+  color: #D3573C;
   text-decoration: none;
   cursor: pointer;
 }
@@ -443,27 +428,24 @@ main .presentation .photograph .tag-all {
 .mySlides {
   display: none;
 }
-
-.cursor {
-  cursor: pointer;
+.mySlides p {
+  margin-top: 0px;
+  color: #901C1C;
 }
 
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
   margin-top: -50px;
-  color: black;
-  font-weight: bold;
+  color: #901C1C;
   font-size: 32px;
-  transition: 0.6s ease;
-  user-select: none;
-  -webkit-user-select: none;
+}
+.prev:hover, .prev focus, .next:hover, .next focus {
+  color: #D3573C;
 }
 
-/* Position the "next button" to the right */
 .next {
   right: -32px;
 }

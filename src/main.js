@@ -30,7 +30,7 @@ function createPhotographers(photographers) {
         const div = document.createElement('div');
         div.classList.add("photograph");
         div.innerHTML = `<a href="public/photographer-page.html?id=${photographer.id}">
-                        <div role="img" aria-label="Mimi Keel">
+                        <div role="img" aria-label="${photographer.name}">
                             <img class="profile-picture" src="public/portraitPicture/${photographer.portrait}" alt=""/>
                             <h2> ${photographer.name} </h2>
                         </div>
