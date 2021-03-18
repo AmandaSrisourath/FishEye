@@ -41,22 +41,22 @@ let slideIndex = 1;
 showSlides(slideIndex);
 
 const prevSlide = document.querySelector("#prev-image");
-prevSlide.addEventListener("click", lessSlides(-1));
+prevSlide.addEventListener("click", function() {
+    plusSlides(-1);
+});
 
 const nextSlide = document.querySelector("#next-image");
-nextSlide.addEventListener("click", plusSlides(1));
-
-function lessSlides(n) {
-    showSlides(slideIndex -= n);
-}
+nextSlide.addEventListener("click", function() {
+    plusSlides(1);
+});
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
-}
+};
 
 function currentSlide(n) {
     showSlides(slideIndex = n);
-}
+};
 
 function showSlides(n) {
     let i;

@@ -382,24 +382,22 @@ main {
   padding: 0;
   width: 80%;
   max-width: 1200px;
+  .close {
+    color: $color-primary;
+    position: absolute;
+    right: -40px;
+    font-size: 40px;
+    font-weight: bold;
+    &:hover, &:focus {
+      color: $color-secondary;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
   .big-image {
     width: 100%;
     border-radius: 4px;
     box-shadow: 4px 0px darken($color-tertiary, 20);
-  }
-}
-
-.close {
-  color: $color-primary;
-  position: absolute;
-  top: 30px;
-  right: 64px;
-  font-size: 32px;
-  font-weight: bold;
-  &:hover, &:focus {
-    color: $color-secondary;
-    text-decoration: none;
-    cursor: pointer;
   }
 }
 

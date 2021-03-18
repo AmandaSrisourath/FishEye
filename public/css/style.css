@@ -405,24 +405,22 @@ main .presentation .photograph .tag-all {
   width: 80%;
   max-width: 1200px;
 }
+.modal-content .close {
+  color: #901C1C;
+  position: absolute;
+  right: -40px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.modal-content .close:hover, .modal-content .close:focus {
+  color: #D3573C;
+  text-decoration: none;
+  cursor: pointer;
+}
 .modal-content .big-image {
   width: 100%;
   border-radius: 4px;
   box-shadow: 4px 0px #c7c7c7;
-}
-
-.close {
-  color: #901C1C;
-  position: absolute;
-  top: 30px;
-  right: 64px;
-  font-size: 32px;
-  font-weight: bold;
-}
-.close:hover, .close:focus {
-  color: #D3573C;
-  text-decoration: none;
-  cursor: pointer;
 }
 
 .mySlides {

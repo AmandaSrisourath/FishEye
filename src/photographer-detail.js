@@ -32,3 +32,44 @@ photographerPortrait.src = `./portraitPicture/${foundPhotographer.portrait}`;
 
 const photographerPrice = document.querySelector('#price');
 photographerPrice.innerHTML = foundPhotographer.price;
+
+
+/*
+function Factory() {
+    this.createMedia = function (media) {
+        let newMedia;
+
+        if (media.image) {
+            newMedia = new Image(media);
+        } else if (media.video) {
+            newMedia = new Video(media);
+        }
+        return newMedia;
+    }
+}
+
+let Image = function (media) {
+    this.type = image;
+    this.getHTML = `<img src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
+};
+
+let Video = function (media) {
+    this.type = video;
+    this.getHTML = `${}`;
+};
+
+function run () {
+    let medias = [];
+    let factory = new Factory();
+    const photographerFirstName = foundPhotographer.name.split(" ")[0];
+
+    const allMedia = data.media;
+    allMedia.forEach((media) => {
+        if (media.photographerId === id) {
+            media.photographerFirstName = photographerFirstName;
+        }
+    });
+
+    medias.push(factory.createMedia("image"));
+    medias.push(factory.createMedia("video"));
+}*/
