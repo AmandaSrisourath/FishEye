@@ -72,15 +72,6 @@
       "price": 55
     },
     {
-      "id": 8520927,
-      "photographerId": 82,
-      "image": "Fashion_Urban_Jungle.jpg",
-      "tags": ["fashion"],
-      "likes": 11,
-      "date": "2011-11-06",
-      "price": 55
-    },
-    {
       "id": 9025895,
       "photographerId": 82,
       "image": "Fashion_Pattern_on_Pattern.jpg",
@@ -92,7 +83,7 @@
     {
       "id": 9275938,
       "photographerId": 82,
-      "image": "Event-_eddingGazebo.jpg",
+      "image": "Event_WeddingGazebo.jpg",
       "tags": ["events"],
       "likes": 69,
       "date": "2018-02-22",
@@ -174,7 +165,7 @@
     {
       "id": 32958383,
       "photographerId": 925,
-      "image": "Fashion_Melody_Red_on_Stripes.jpg",
+      "image": "Sport_Butterfly.jpg",
       "tags": ["fashion"],
       "likes": 11,
       "date": "2019-08-12",
@@ -247,7 +238,7 @@
     {
       "id": 343423425,
       "photographerId": 527,
-      "image": "Travel_Outdoor_Baths.jpg",
+      "image": "Travel_On_the_Road.jpg",
       "tags": ["travel"],
       "likes": 101,
       "date": "2017-04-03",
@@ -345,15 +336,6 @@
       "price": 45
     },
     {
-      "id": 2523434634,
-      "photographerId": 243,
-      "image": "Portrait_Nora.jpg",
-      "tags": ["portait"],
-      "likes": 63,
-      "date": "2019-04-07",
-      "price": 45
-    },
-    {
       "id": 398847109,
       "photographerId": 243,
       "image": "Portrait_Background.jpg",
@@ -401,22 +383,13 @@
     {
       "id": 95234343,
       "photographerId": 243,
-      "image": "Animals_Rainbow.jpg.jpg",
+      "image": "Animals_Rainbow.jpg",
       "tags": ["animals"],
       "likes": 59,
       "date": "2019-07-02",
       "price": 60
     },
 
-    {
-      "id": 52343416,
-      "photographerId": 195,
-      "image": "Travel_Tower.jpg",
-      "tags": ["travel"],
-      "likes": 25,
-      "date": "2019-04-03",
-      "price": 60
-    },
     {
       "id": 2523434,
       "photographerId": 195,
@@ -570,15 +543,6 @@
       "likes": 55,
       "date": "2018-05-10",
       "price": 72
-    },
-    {
-      "id": 222959233,
-      "photographerId": 930,
-      "image": "Architecture_Horseshoe.jpg",
-      "tags": ["architecture"],
-      "likes": 85,
-      "date": "2018-05-15",
-      "price": 71
     },
     {
       "id": 965933434,

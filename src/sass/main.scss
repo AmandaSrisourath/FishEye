@@ -132,22 +132,31 @@ main {
   display: flex;
   flex-wrap: wrap;
   .album {
-    margin-right: 76px;
+    margin-right: 38px;
     margin-bottom: 8px;
     .image {
       width: 250px;
       height: 250px;
       border-radius: 4px;
       cursor: pointer;
+      object-fit: cover;
     }
     .image-description {
       display: flex;
       justify-content: space-between;
       width: 250px;
       color: $color-primary;
-      p, .fa-heart {
+      #likes {
+        display: flex;
+        .fa-heart {
+          margin-left: 4px;
+          margin-top: 10px;
+          font-size: 17px;
+        }
+      }
+      p {
         font-size: 20px;
-        margin-top: 4px;
+        margin-top: 6px;
       }
     }
   }
@@ -171,6 +180,7 @@ main {
   .fa-heart {
     margin-top: 24px;
     font-size: 16px;
+    margin-left: 4px;
   }
 }
 

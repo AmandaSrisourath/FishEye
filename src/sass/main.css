@@ -163,7 +163,7 @@ main .presentation .photograph .tag-all {
   flex-wrap: wrap;
 }
 #all-album .album {
-  margin-right: 76px;
+  margin-right: 38px;
   margin-bottom: 8px;
 }
 #all-album .album .image {
@@ -171,6 +171,7 @@ main .presentation .photograph .tag-all {
   height: 250px;
   border-radius: 4px;
   cursor: pointer;
+  object-fit: cover;
 }
 #all-album .album .image-description {
   display: flex;
@@ -178,9 +179,17 @@ main .presentation .photograph .tag-all {
   width: 250px;
   color: #901C1C;
 }
-#all-album .album .image-description p, #all-album .album .image-description .fa-heart {
+#all-album .album .image-description #likes {
+  display: flex;
+}
+#all-album .album .image-description #likes .fa-heart {
+  margin-left: 4px;
+  margin-top: 10px;
+  font-size: 17px;
+}
+#all-album .album .image-description p {
   font-size: 20px;
-  margin-top: 4px;
+  margin-top: 6px;
 }
 
 #photographer-detail {
@@ -202,6 +211,7 @@ main .presentation .photograph .tag-all {
 #photographer-detail .fa-heart {
   margin-top: 24px;
   font-size: 16px;
+  margin-left: 4px;
 }
 
 #bground {

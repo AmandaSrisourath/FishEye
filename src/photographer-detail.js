@@ -34,7 +34,6 @@ const photographerPrice = document.querySelector('#price');
 photographerPrice.innerHTML = foundPhotographer.price;
 
 
-/*
 function Factory() {
     this.createMedia = function (media) {
         let newMedia;
@@ -49,13 +48,27 @@ function Factory() {
 }
 
 let Image = function (media) {
-    this.type = image;
-    this.getHTML = `<img src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
+    this.getHTML = `<img class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}">`;
+    this.photographerFirstName = media.photographerFirstName;
+    this.id = media.id;
+    this.photographerId = media.photographerId;
+    this.image = media.image;
+    this.tags = media.tags;
+    this.likes = media.likes;
+    this.date = media.date;
+    this.price = media.price;
 };
 
 let Video = function (media) {
-    this.type = video;
-    this.getHTML = `${}`;
+    this.getHTML = `<img class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}">`;
+    this.photographerFirstName = media.photographerFirstName;
+    this.id = media.id;
+    this.photographerId = media.photographerId;
+    this.video = media.video;
+    this.tags = media.tags;
+    this.likes = media.likes;
+    this.date = media.date;
+    this.price = media.price;
 };
 
 function run () {
@@ -65,11 +78,30 @@ function run () {
 
     const allMedia = data.media;
     allMedia.forEach((media) => {
-        if (media.photographerId === id) {
+        if (media.photographerId === parseInt(id)) {
             media.photographerFirstName = photographerFirstName;
+            medias.push(factory.createMedia(media));
         }
     });
 
-    medias.push(factory.createMedia("image"));
-    medias.push(factory.createMedia("video"));
-}*/
+    medias.forEach((media) => {
+        const div = document.createElement('div');
+        div.classList.add("album");
+        div.innerHTML = `<div class="column album">
+                            ${media.getHTML}
+                            <div class="image-description">
+                                <p>Arc-en-ciel</p>
+                                <p>${media.price}€</p>
+                                <div id="likes">
+                                    <p>${media.likes}</p>
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                            </div>
+                         </div>`
+        document.querySelector('#all-album').appendChild(div);
+    });console.log(medias);
+};
+
+run();
+
+// ${media.id} ${media.photographerId} ${media.image} ${media.tags} ${media.likes} ${media.date} ${media.price}
