@@ -63,6 +63,7 @@
   ],
   "media": [
     {
+      "title": "Yellow Beach",
       "id": 342550,
       "photographerId": 82,
       "image": "Fashion_Yellow_Beach.jpg",
@@ -72,6 +73,7 @@
       "price": 55
     },
     {
+      "title": "Pattern on Pattern",
       "id": 9025895,
       "photographerId": 82,
       "image": "Fashion_Pattern_on_Pattern.jpg",
@@ -81,6 +83,7 @@
       "price": 55
     },
     {
+      "title": "Wedding Gazebo",
       "id": 9275938,
       "photographerId": 82,
       "image": "Event_WeddingGazebo.jpg",
@@ -90,6 +93,7 @@
       "price": 55
     },
     {
+      "title": "Sparklers",
       "id": 2053494,
       "photographerId": 82,
       "image": "Event_Sparklers.jpg",
@@ -99,6 +103,7 @@
       "price": 55
     },
     {
+      "title": "18th Anniversary",
       "id": 7324238,
       "photographerId": 82,
       "image": "Event_18thAnniversary.jpg",
@@ -108,6 +113,7 @@
       "price": 55
     },
     {
+      "title": "Horse Sculpture",
       "id": 8328953,
       "photographerId": 82,
       "video": "Art_Wooden_Horse_Sculpture.mp4",
@@ -117,6 +123,7 @@
       "price": 100
     },
     {
+      "title": "Triangle Man",
       "id": 7502053,
       "photographerId": 82,
       "image": "Art_Triangle_Man.jpg",
@@ -126,6 +133,7 @@
       "price": 55
     },
     {
+      "title": "Purple light",
       "id": 8523492,
       "photographerId": 82,
       "image": "Art_Purple_light.jpg",
@@ -135,6 +143,7 @@
       "price": 55
     },
     {
+      "title": "Mine",
       "id": 75902334,
       "photographerId": 82,
       "image": "Art_Mine.jpg",
@@ -145,6 +154,7 @@
     },
 
     {
+      "title":"2000 with 8",
       "id": 73852953,
       "photographerId": 925,
       "image": "Sport_2000_with_8.jpg",
@@ -154,6 +164,7 @@
       "price": 70
     },
     {
+      "title": "Wings",
       "id": 92758372,
       "photographerId": 925,
       "image": "Fashion_Wings.jpg",
@@ -163,6 +174,7 @@
       "price": 70
     },
     {
+      "title": "Butterfly",
       "id": 32958383,
       "photographerId": 925,
       "image": "Sport_Butterfly.jpg",
@@ -172,6 +184,7 @@
       "price": 70
     },
     {
+      "title": "Venture Conference",
       "id": 928587383,
       "photographerId": 925,
       "image": "Event_VentureConference.jpg",
@@ -181,6 +194,7 @@
       "price": 70
     },
     {
+      "title": "Product Pitch",
       "id": 725639493,
       "photographerId": 925,
       "image": "Event_ProductPitch.jpg",
@@ -190,6 +204,7 @@
       "price": 70
     },
     {
+      "title": "Keyboard Check",
       "id": 23394384,
       "photographerId": 925,
       "image": "Event_KeyboardCheck.jpg",
@@ -199,6 +214,7 @@
       "price": 70
     },
     {
+      "title": "Emcee",
       "id": 87367293,
       "photographerId": 925,
       "image": "Event_Emcee.jpg",
@@ -208,6 +224,7 @@
       "price": 70
     },
     {
+      "title": "Majesty",
       "id": 593834784,
       "photographerId": 925,
       "image": "Animals_Majesty.jpg",
@@ -217,6 +234,7 @@
       "price": 70
     },
     {
+      "title": "Puppiness",
       "id": 83958935,
       "photographerId": 925,
       "video": "Animals_Puppiness.mp4",
@@ -227,6 +245,7 @@
     },
 
     {
+      "title": "Rock Mountains",
       "id": 394583434,
       "photographerId": 527,
       "video": "Travel_Rock_Mountains.mp4",
@@ -236,6 +255,7 @@
       "price": 45
     },
     {
+      "title": "On the Road",
       "id": 343423425,
       "photographerId": 527,
       "image": "Travel_On_the_Road.jpg",
@@ -245,6 +265,7 @@
       "price": 45
     },
     {
+      "title": "Road into Hill",
       "id": 73434243,
       "photographerId": 527,
       "image": "Travel_Road_into_Hill.jpg",
@@ -254,6 +275,7 @@
       "price": 45
     },
     {
+      "title": "Bridge into Forest",
       "id": 23425523,
       "photographerId": 527,
       "image": "Travel_Bridge_into_Forest.jpg",
@@ -263,6 +285,7 @@
       "price": 45
     },
     {
+      "title": "Boat Wanderer",
       "id": 23134513,
       "photographerId": 527,
       "image": "Travel_Boat_Wanderer.jpg",
@@ -272,6 +295,7 @@
       "price": 45
     },
     {
+      "title": "Sunkissed",
       "id": 92352352,
       "photographerId": 527,
       "image": "Portrait_Sunkissed.jpg",
@@ -281,6 +305,7 @@
       "price": 45
     },
     {
+      "title": "Shaw",
       "id": 34513453,
       "photographerId": 527,
       "image": "Portrait_Shaw.jpg",
@@ -290,6 +315,7 @@
       "price": 45
     },
     {
+      "title": "Alexandra",
       "id": 23523533,
       "photographerId": 527,
       "image": "Portrait_Alexandra.jpg",
@@ -299,6 +325,7 @@
       "price": 45
     },
     {
+      "title": "Afternoon Break",
       "id": 525834234,
       "photographerId": 527,
       "image": "Portrait_AfternoonBreak.jpg",
@@ -309,6 +336,7 @@
     },
 
     {
+      "title": "Lonesome",
       "id": 623534343,
       "photographerId": 243,
       "image": "Travel_Lonesome.jpg",
@@ -318,6 +346,7 @@
       "price": 45
     },
     {
+      "title": "Hillside Color",
       "id": 625025343,
       "photographerId": 243,
       "image": "Travel_HillsideColor.jpg",
@@ -327,6 +356,7 @@
       "price": 45
     },
     {
+      "title": "Wednesday",
       "id": 2525345343,
       "photographerId": 243,
       "image": "Portrait_Wednesday.jpg",
@@ -336,6 +366,7 @@
       "price": 45
     },
     {
+      "title": "Background",
       "id": 398847109,
       "photographerId": 243,
       "image": "Portrait_Background.jpg",
@@ -345,6 +376,7 @@
       "price": 45
     },
     {
+      "title": "Seaside Wedding",
       "id": 2534342,
       "photographerId": 243,
       "image": "Event_SeasideWedding.jpg",
@@ -354,6 +386,7 @@
       "price": 45
     },
     {
+      "title": "Pinto Wedding",
       "id": 65235234,
       "photographerId": 243,
       "image": "Event_PintoWedding.jpg",
@@ -363,6 +396,7 @@
       "price": 45
     },
     {
+      "title": "Benevides Wedding",
       "id": 23523434,
       "photographerId": 243,
       "image": "Event_BenevidesWedding.jpg",
@@ -372,6 +406,7 @@
       "price": 45
     },
     {
+      "title": "Wild Horses",
       "id": 5234343,
       "photographerId": 243,
       "video": "Animals_Wild_Horses_in_the_mountains.mp4",
@@ -381,6 +416,7 @@
       "price": 60
     },
     {
+      "title": "Rainbow",
       "id": 95234343,
       "photographerId": 243,
       "image": "Animals_Rainbow.jpg",
@@ -391,6 +427,7 @@
     },
 
     {
+      "title": "Sunset on Canals",
       "id": 2523434,
       "photographerId": 195,
       "image": "Travel_SunsetonCanals.jpg",
@@ -400,6 +437,7 @@
       "price": 60
     },
     {
+      "title": "Open Mountain",
       "id": 95293534,
       "photographerId": 195,
       "image": "Travel_OpenMountain.jpg",
@@ -409,6 +447,7 @@
       "price": 60
     },
     {
+      "title": "Bike and Stair",
       "id": 356234343,
       "photographerId": 195,
       "image": "Travel_Bike_and_Stair.jpg",
@@ -418,6 +457,7 @@
       "price": 60
     },
     {
+      "title": "Adventure Door",
       "id": 235234343,
       "photographerId": 195,
       "image": "Travel_Adventure_Door.jpg",
@@ -427,6 +467,7 @@
       "price": 60
     },
     {
+      "title": "Contrast",
       "id": 6234234343,
       "photographerId": 195,
       "image": "Architecture_Contrast.jpg",
@@ -436,6 +477,7 @@
       "price": 60
     },
     {
+      "title": "On a hill",
       "id": 6525666253,
       "photographerId": 195,
       "image": "Architecture_On_a_hill.jpg",
@@ -445,6 +487,7 @@
       "price": 60
     },
     {
+      "title": "Dome",
       "id": 98252523433,
       "photographerId": 195,
       "image": "Architecture_Dome.jpg",
@@ -454,15 +497,17 @@
       "price": 60
     },
     {
+      "title": "Empty highway",
       "id": 9259398453,
       "photographerId": 195,
-      "video": "Architecture_coverr_circle_empty_highway_in_buenos_aires_587740985637.mp4",
+      "video": "Architecture_cover_circle_empty_highway_in_buenos_aires_587740985637.mp4",
       "tags": ["architecture"],
       "likes": 57,
       "date": "2020-01-20",
       "price": 65
     },
     {
+      "title": "Corner Room",
       "id": 3523523534,
       "photographerId": 195,
       "image": "Architecture_Corner_Room.jpg",
@@ -473,6 +518,7 @@
     },
 
     {
+      "title": "Tricks in the air",
       "id": 952343423,
       "photographerId": 930,
       "video": "Sport_Tricks_in_the_air.mp4",
@@ -482,6 +528,7 @@
       "price": 70
     },
     {
+      "title": "Next Hold",
       "id": 235234343,
       "photographerId": 930,
       "image": "Sport_Next_Hold.jpg",
@@ -491,6 +538,7 @@
       "price": 65
     },
     {
+      "title": "Water Tunnel",
       "id": 235343222,
       "photographerId": 930,
       "image": "sport_water_tunnel.jpg",
@@ -500,6 +548,7 @@
       "price": 70
     },
     {
+      "title": "Sky Cross",
       "id": 7775342343,
       "photographerId": 930,
       "image": "Sport_Sky_Cross.jpg",
@@ -509,6 +558,7 @@
       "price": 50
     },
     {
+      "title": "Race End",
       "id": 9253445784,
       "photographerId": 930,
       "image": "Sport_Race_End.jpg",
@@ -518,6 +568,7 @@
       "price": 65
     },
     {
+      "title": "Jump",
       "id": 22299394,
       "photographerId": 930,
       "image": "Sport_Jump.jpg",
@@ -527,6 +578,7 @@
       "price": 70
     },
     {
+      "title": "White Light",
       "id": 3452342633,
       "photographerId": 930,
       "image": "Architecture_White_Light.jpg",
@@ -536,6 +588,7 @@
       "price": 75
     },
     {
+      "title": "Water on Modern",
       "id": 939234243,
       "photographerId": 930,
       "image": "Architecture_Water_on_Modern.jpg",
@@ -545,6 +598,7 @@
       "price": 72
     },
     {
+      "title": "Cross Bar",
       "id": 965933434,
       "photographerId": 930,
       "image": "Architecture_Cross_Bar.jpg",
@@ -554,6 +608,7 @@
       "price": 58
     },
     {
+      "title": "Connected Curves",
       "id": 777723343,
       "photographerId": 930,
       "image": "Architecture_Connected_Curves.jpg",

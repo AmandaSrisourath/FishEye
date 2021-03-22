@@ -49,8 +49,9 @@ function Factory() {
 
 let Image = function (media) {
     this.getHTML = `<img class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}">`;
-    this.photographerFirstName = media.photographerFirstName;
+    this.title = media.title;
     this.id = media.id;
+    this.photographerFirstName = media.photographerFirstName;
     this.photographerId = media.photographerId;
     this.image = media.image;
     this.tags = media.tags;
@@ -61,8 +62,9 @@ let Image = function (media) {
 
 let Video = function (media) {
     this.getHTML = `<img class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}">`;
-    this.photographerFirstName = media.photographerFirstName;
+    this.title = media.title;
     this.id = media.id;
+    this.photographerFirstName = media.photographerFirstName;
     this.photographerId = media.photographerId;
     this.video = media.video;
     this.tags = media.tags;
@@ -90,7 +92,7 @@ function run () {
         div.innerHTML = `<div class="column album">
                             ${media.getHTML}
                             <div class="image-description">
-                                <p>Arc-en-ciel</p>
+                                <p>${media.title}</p>
                                 <p>${media.price}€</p>
                                 <div id="likes">
                                     <p>${media.likes}</p>
