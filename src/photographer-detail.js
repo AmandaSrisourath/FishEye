@@ -99,9 +99,66 @@ function run () {
                             </div>
                          </div>`
         document.querySelector('#all-album').appendChild(div);
-    });console.log(medias);
+
+        const divLightbox = document.createElement('div');
+        divLightbox.classList.add('mySlides');
+        divLightbox.innerHTML = `${media.getHTML}    
+                                 <p>Arc-en-ciel</p>`
+        document.querySelector('#myModal').appendChild(divLightbox);
+    });
 };
 
 run();
 
-// ${media.id} ${media.photographerId} ${media.image} ${media.tags} ${media.likes} ${media.date} ${media.price}
+const openLightbox = document.querySelectorAll(".open-lightbox");
+openLightbox.forEach((elt, index) => elt.addEventListener("click",() => {
+    openModal();
+    currentSlide(index +1);
+}));
+
+function openModal() {
+    document.getElementById("myModal").style.display = "block";
+}
+
+const closeLightboxModal = document.querySelector("#close-lightbox");
+closeLightboxModal.addEventListener("click",(closeLightbox));
+
+function closeLightbox() {
+    document.getElementById("myModal").style.display = "none";
+}
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+const prevSlide = document.querySelector("#prev-image");
+prevSlide.addEventListener("click", function() {
+    plusSlides(-1);
+});
+
+const nextSlide = document.querySelector("#next-image");
+nextSlide.addEventListener("click", function() {
+    plusSlides(1);
+});
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+};
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+};
+
+function showSlides(n) {
+    let i;
+    let slides = document.querySelectorAll(".mySlides");
+    if (n > slides.length) {
+        slideIndex = 1;
+    };
+    if (n < 1) {
+        slideIndex = slides.length;
+    };
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex-1].style.display = "block";
+};

@@ -163,12 +163,12 @@ main .presentation .photograph .tag-all {
   flex-wrap: wrap;
 }
 #all-album .album {
-  margin-right: 38px;
+  margin-right: 33px;
   margin-bottom: 8px;
 }
 #all-album .album .image {
-  width: 250px;
-  height: 250px;
+  width: 260px;
+  height: 260px;
   border-radius: 4px;
   cursor: pointer;
   object-fit: cover;
@@ -398,7 +398,6 @@ main .presentation .photograph .tag-all {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 40px;
   left: 0;
   top: 0;
   width: 100%;
@@ -419,6 +418,7 @@ main .presentation .photograph .tag-all {
   color: #901C1C;
   position: absolute;
   right: -40px;
+  top: 32px;
   font-size: 40px;
   font-weight: bold;
 }
@@ -427,26 +427,32 @@ main .presentation .photograph .tag-all {
   text-decoration: none;
   cursor: pointer;
 }
-.modal-content .big-image {
-  width: 100%;
-  border-radius: 4px;
-  box-shadow: 4px 0px #c7c7c7;
-}
 
 .mySlides {
   display: none;
 }
+.mySlides img {
+  display: block;
+  width: 1000px;
+  height: 895px;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  border-radius: 4px;
+  box-shadow: 4px 0px #c7c7c7;
+}
 .mySlides p {
-  margin-top: 0px;
+  margin-left: 11%;
+  margin-top: 8px;
   color: #901C1C;
 }
 
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
   width: auto;
-  margin-top: -50px;
+  margin-top: 40%;
   color: #901C1C;
   font-size: 32px;
 }

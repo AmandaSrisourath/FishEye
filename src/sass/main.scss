@@ -132,11 +132,11 @@ main {
   display: flex;
   flex-wrap: wrap;
   .album {
-    margin-right: 38px;
+    margin-right: 33px;
     margin-bottom: 8px;
     .image {
-      width: 250px;
-      height: 250px;
+      width: 260px;
+      height: 260px;
       border-radius: 4px;
       cursor: pointer;
       object-fit: cover;
@@ -376,7 +376,6 @@ main {
   display: none;
   position: fixed;
   z-index: 1;
-  padding-top: 40px;
   left: 0;
   top: 0;
   width: 100%;
@@ -396,6 +395,7 @@ main {
     color: $color-primary;
     position: absolute;
     right: -40px;
+    top: 32px;
     font-size: 40px;
     font-weight: bold;
     &:hover, &:focus {
@@ -404,17 +404,24 @@ main {
       cursor: pointer;
     }
   }
-  .big-image {
-    width: 100%;
-    border-radius: 4px;
-    box-shadow: 4px 0px darken($color-tertiary, 20);
-  }
 }
 
 .mySlides {
   display: none;
+  img {
+    display: block;
+    width: 1000px;
+    height: 895px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 4px;
+    box-shadow: 4px 0px darken($color-tertiary, 20);
+  }
   p {
-    margin-top: 0px;
+    margin-left: 11%;
+    margin-top: 8px;
     color: $color-primary;
   }
 }
@@ -422,9 +429,8 @@ main {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
   width: auto;
-  margin-top: -50px;
+  margin-top: 40%;
   color: $color-primary;
   font-size: 32px;
   &:hover, focus {
