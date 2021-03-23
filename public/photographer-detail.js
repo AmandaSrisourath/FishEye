@@ -93,6 +93,7 @@ photographerPortrait.src = `./portraitPicture/${foundPhotographer.portrait}`;
 const photographerPrice = document.querySelector('#price');
 photographerPrice.innerHTML = foundPhotographer.price;
 
+let medias = [];
 
 function Factory() {
     this.createMedia = function (media) {
@@ -108,7 +109,7 @@ function Factory() {
 }
 
 let Image = function (media) {
-    this.getHTML = `<img class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}">`;
+    this.getHTML = `<img class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -121,7 +122,7 @@ let Image = function (media) {
 };
 
 let Video = function (media) {
-    this.getHTML = `<img class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}">`;
+    this.getHTML = `<video class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}"><source src="movie.mp4" type="video/mp4"></video>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -134,7 +135,6 @@ let Video = function (media) {
 };
 
 function run () {
-    let medias = [];
     let factory = new Factory();
     const photographerFirstName = foundPhotographer.name.split(" ")[0];
 
@@ -145,6 +145,21 @@ function run () {
             medias.push(factory.createMedia(media));
         }
     });
+    createMedias(medias);
+};
+
+run();
+
+function createMedias(medias) {
+    const mediaDiv = document.querySelector('#all-album');
+    mediaDiv.innerHTML = "";
+
+    const modalDiv = document.querySelector('#myModal');
+    modalDiv.innerHTML = `<div class="modal-content">
+                            <span id="close-lightbox" class="close" >&times;</span>
+                            <a id="prev-image" class="prev">&#10094;</a>
+                            <a id="next-image" class="next">&#10095;</a>
+                          </div>`;
 
     medias.forEach((media) => {
         const div = document.createElement('div');
@@ -165,12 +180,38 @@ function run () {
         const divLightbox = document.createElement('div');
         divLightbox.classList.add('mySlides');
         divLightbox.innerHTML = `${media.getHTML}    
-                                 <p>Arc-en-ciel</p>`
+                                 <p>${media.title}</p>`
         document.querySelector('#myModal').appendChild(divLightbox);
     });
 };
 
-run();
+const selects = document.querySelectorAll('.select-box__input');
+
+selects.forEach((input) => input.addEventListener("change",(event) => {
+    const filter = event.target.value;
+    if (filter === "date") {
+        medias.sort((a, b) =>  {
+            return new Date(b.date) - new Date(a.date)
+        });
+    } else if (filter === "title") {
+        medias.sort((a, b) =>  {
+            return new Title(b.title) - new Title(a.title)
+        });
+    }
+    createMedias(medias);
+}));
+
+/*
+const medias = data.media;
+createMedias(medias);
+
+function filterAndCreateMedias(medias) {
+    const mediaDiv = document.querySelector('.select-box');
+    mediaDiv.innerHTML = "";
+
+    const mediasFiltered = medias.filter((date) => medias.tags.includes(medias));
+    createMedias(mediasFiltered);
+}*/
 
 const openLightbox = document.querySelectorAll(".open-lightbox");
 openLightbox.forEach((elt, index) => elt.addEventListener("click",() => {
