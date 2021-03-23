@@ -183,6 +183,23 @@ function createMedias(medias) {
                                  <p>${media.title}</p>`
         document.querySelector('#myModal').appendChild(divLightbox);
     });
+    const openLightbox = document.querySelectorAll(".open-lightbox");
+    openLightbox.forEach((elt, index) => elt.addEventListener("click",() => {
+        openModal();
+        currentSlide(index +1);
+    }));
+    const closeLightboxModal = document.querySelector("#close-lightbox");
+    closeLightboxModal.addEventListener("click",(closeLightbox));
+
+    const prevSlide = document.querySelector("#prev-image");
+    prevSlide.addEventListener("click", function() {
+        plusSlides(-1);
+    });
+
+    const nextSlide = document.querySelector("#next-image");
+    nextSlide.addEventListener("click", function() {
+        plusSlides(1);
+    });
 };
 
 const selects = document.querySelectorAll('.select-box__input');
@@ -195,36 +212,19 @@ selects.forEach((input) => input.addEventListener("change",(event) => {
         });
     } else if (filter === "title") {
         medias.sort((a, b) =>  {
-            return new Title(b.title) - new Title(a.title)
+            return a.title.localeCompare(b.title);
+        });
+    } else {
+        medias.sort((a,b) => {
+            return b.likes - a.likes;
         });
     }
     createMedias(medias);
 }));
 
-/*
-const medias = data.media;
-createMedias(medias);
-
-function filterAndCreateMedias(medias) {
-    const mediaDiv = document.querySelector('.select-box');
-    mediaDiv.innerHTML = "";
-
-    const mediasFiltered = medias.filter((date) => medias.tags.includes(medias));
-    createMedias(mediasFiltered);
-}*/
-
-const openLightbox = document.querySelectorAll(".open-lightbox");
-openLightbox.forEach((elt, index) => elt.addEventListener("click",() => {
-    openModal();
-    currentSlide(index +1);
-}));
-
 function openModal() {
     document.getElementById("myModal").style.display = "block";
 }
-
-const closeLightboxModal = document.querySelector("#close-lightbox");
-closeLightboxModal.addEventListener("click",(closeLightbox));
 
 function closeLightbox() {
     document.getElementById("myModal").style.display = "none";
@@ -232,16 +232,6 @@ function closeLightbox() {
 
 let slideIndex = 1;
 showSlides(slideIndex);
-
-const prevSlide = document.querySelector("#prev-image");
-prevSlide.addEventListener("click", function() {
-    plusSlides(-1);
-});
-
-const nextSlide = document.querySelector("#next-image");
-nextSlide.addEventListener("click", function() {
-    plusSlides(1);
-});
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
