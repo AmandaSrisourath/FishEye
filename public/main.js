@@ -90,16 +90,16 @@ function createPhotographers(photographers) {
         const div = document.createElement('div');
         div.classList.add("photograph");
         div.innerHTML = `<a href="public/photographer-page.html?id=${photographer.id}">
-                        <div role="img" aria-label="${photographer.name}">
-                            <img class="profile-picture" src="public/portraitPicture/${photographer.portrait}" alt=""/>
-                            <h2> ${photographer.name} </h2>
-                        </div>
-                     </a>
-                     <div>
-                        <p class="location"> ${photographer.city}, ${photographer.country} </p>
-                        <p class="slogan"> ${photographer.tagline} </p>
-                        <p class="price"> ${photographer.price}€/jour </p>
-                     </div>`
+                            <div role="img" aria-label="${photographer.name}">
+                                <img class="profile-picture" src="public/portraitPicture/${photographer.portrait}" alt=""/>
+                                <h2> ${photographer.name} </h2>
+                            </div>
+                         </a>
+                         <div>
+                            <p class="location"> ${photographer.city}, ${photographer.country} </p>
+                            <p class="slogan"> ${photographer.tagline} </p>
+                            <p class="price"> ${photographer.price}€/jour </p>
+                         </div>`
         const divTag = document.createElement('div');
         photographer.tags.forEach((tag) => {
             const link = document.createElement('a');

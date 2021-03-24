@@ -109,7 +109,7 @@ function Factory() {
 }
 
 let Image = function (media) {
-    this.getHTML = `<img class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
+    this.getHTML = `<img class="hover-shadow open-lightbox image" alt="" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -122,7 +122,7 @@ let Image = function (media) {
 };
 
 let Video = function (media) {
-    this.getHTML = `<video class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}"><source src="movie.mp4" type="video/mp4"></video>`;
+    this.getHTML = `<video class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}" controls><source src="movie.mp4" type="video/mp4"></video>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -146,7 +146,7 @@ function run () {
         }
     });
     createMedias(medias);
-};
+}
 
 run();
 
@@ -164,7 +164,7 @@ function createMedias(medias) {
     medias.forEach((media) => {
         const div = document.createElement('div');
         div.classList.add("album");
-        div.innerHTML = `<div class="column album">
+        div.innerHTML = `<div class="album">
                             ${media.getHTML}
                             <div class="image-description">
                                 <p>${media.title}</p>
@@ -178,7 +178,7 @@ function createMedias(medias) {
         document.querySelector('#all-album').appendChild(div);
 
         const divLightbox = document.createElement('div');
-        divLightbox.classList.add('mySlides');
+        divLightbox.classList.add('slides');
         divLightbox.innerHTML = `${media.getHTML}    
                                  <p>${media.title}</p>`
         document.querySelector('#myModal').appendChild(divLightbox);
@@ -200,7 +200,7 @@ function createMedias(medias) {
     nextSlide.addEventListener("click", function() {
         plusSlides(1);
     });
-};
+}
 
 const selects = document.querySelectorAll('.select-box__input');
 
@@ -235,26 +235,26 @@ showSlides(slideIndex);
 
 function plusSlides(n) {
     showSlides(slideIndex += n);
-};
+}
 
 function currentSlide(n) {
     showSlides(slideIndex = n);
-};
+}
 
 function showSlides(n) {
     let i;
-    let slides = document.querySelectorAll(".mySlides");
+    let slides = document.querySelectorAll(".slides");
     if (n > slides.length) {
         slideIndex = 1;
-    };
+    }
     if (n < 1) {
         slideIndex = slides.length;
-    };
+    }
     for (i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";
     }
     slides[slideIndex-1].style.display = "block";
-};
+}
 }();
 /******/ })()
 ;

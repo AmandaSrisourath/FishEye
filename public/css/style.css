@@ -84,12 +84,12 @@ main .presentation .photograph p {
 main .presentation .photograph .location {
   color: #901C1C;
   font-size: 16px;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 4px;
 }
 main .presentation .photograph .slogan {
   color: black;
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 2px;
 }
 main .presentation .photograph .price {
@@ -102,7 +102,6 @@ main .presentation .photograph .tag-all {
   justify-content: center;
 }
 
-/* photographer-page */
 #photographer-header {
   margin-top: 28px;
 }
@@ -124,8 +123,8 @@ main .presentation .photograph .tag-all {
   margin-right: 16px;
 }
 #photographer-navigation #photographer-contact h1 {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 40px;
 }
 #photographer-navigation #photographer-contact h2 {
@@ -135,7 +134,7 @@ main .presentation .photograph .tag-all {
   font-size: 16px;
 }
 #photographer-navigation #photographer-contact p {
-  margin-top: 0px;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 #photographer-navigation #photographer-contact .button {
@@ -172,6 +171,7 @@ main .presentation .photograph .tag-all {
   border-radius: 4px;
   cursor: pointer;
   object-fit: cover;
+  outline: none;
 }
 #all-album .album .image-description {
   display: flex;
@@ -203,7 +203,7 @@ main .presentation .photograph .tag-all {
   margin-left: auto;
   margin-right: 24px;
   position: sticky;
-  bottom: 0px;
+  bottom: 0;
 }
 #photographer-detail #like {
   display: flex;
@@ -239,7 +239,7 @@ main .presentation .photograph .tag-all {
   margin-bottom: 16px;
 }
 #bground #form-modal #contact-close h1 {
-  margin: 0px;
+  margin: 0;
   font-size: 40px;
 }
 #bground #form-modal #contact-close .close-action:hover {
@@ -331,7 +331,7 @@ main .presentation .photograph .tag-all {
 }
 .select-box__input:checked + .select-box__input-text {
   display: block;
-  border-radius: 4px 4px 0px 0px;
+  border-radius: 4px;
 }
 .select-box__input-text {
   display: none;
@@ -347,7 +347,7 @@ main .presentation .photograph .tag-all {
   padding: 0;
   list-style: none;
   opacity: 0;
-  margin-top: 0px;
+  margin-top: 0;
   animation-name: HideList;
   animation-duration: 0.5s;
   animation-delay: 0.5s;
@@ -356,7 +356,7 @@ main .presentation .photograph .tag-all {
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
 }
 .select-box__list li:last-of-type label {
-  border-radius: 0px 0px 4px 4px;
+  border-radius: 0 0 4px 4px;
 }
 .select-box__option {
   display: block;
@@ -376,25 +376,6 @@ main .presentation .photograph .tag-all {
     transform: scaleY(0);
   }
 }
-* {
-  box-sizing: border-box;
-}
-
-.row > .column {
-  padding: 0 8px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.column {
-  float: left;
-  width: 25%;
-}
-
 .modal {
   display: none;
   position: fixed;
@@ -409,7 +390,7 @@ main .presentation .photograph .tag-all {
 
 .modal-content {
   position: relative;
-  background-color: #fefefe;
+  background-color: white;
   margin: auto;
   padding: 0;
   width: 80%;
@@ -429,10 +410,10 @@ main .presentation .photograph .tag-all {
   cursor: pointer;
 }
 
-.mySlides {
+.slides {
   display: none;
 }
-.mySlides .image {
+.slides .image {
   display: block;
   width: 1000px;
   height: 895px;
@@ -441,9 +422,10 @@ main .presentation .photograph .tag-all {
   margin-right: auto;
   margin-top: 40px;
   border-radius: 4px;
-  box-shadow: 4px 0px #c7c7c7;
+  box-shadow: 4px 0 #c7c7c7;
+  outline: none;
 }
-.mySlides p {
+.slides p {
   margin-left: 11%;
   margin-top: 8px;
   color: #901C1C;
@@ -457,7 +439,7 @@ main .presentation .photograph .tag-all {
   color: #901C1C;
   font-size: 32px;
 }
-.prev:hover, .prev focus, .next:hover, .next focus {
+.prev:hover, .prev:focus, .next:hover, .next:focus {
   color: #D3573C;
 }
 

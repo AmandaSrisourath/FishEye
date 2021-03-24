@@ -1,0 +1,333 @@
+#photographer-header {
+  margin-top: 28px;
+}
+#photographer-navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 48px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 16px;
+  background-color: $color-tertiary;
+  #photographer-contact {
+    display: flex;
+    #photographer-name {
+      color: $color-secondary;
+      margin-right: 16px;
+    }
+    h1 {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 40px;
+    }
+    h2 {
+      color: $color-primary;
+      margin-top: 8px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .button {
+      @include button;
+    }
+  }
+}
+
+#photographer-main {
+  margin-left: 100px;
+  margin-right: 22px;
+}
+
+#all-album {
+  display: flex;
+  flex-wrap: wrap;
+  .album {
+    margin-right: 33px;
+    margin-bottom: 8px;
+    .image {
+      width: 260px;
+      height: 260px;
+      border-radius: 4px;
+      cursor: pointer;
+      object-fit: cover;
+      outline: none;
+    }
+    .image-description {
+      display: flex;
+      justify-content: space-between;
+      width: 250px;
+      color: $color-primary;
+      #likes {
+        display: flex;
+        .fa-heart {
+          margin-left: 4px;
+          margin-top: 10px;
+          font-size: 17px;
+        }
+      }
+      p {
+        font-size: 20px;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+#photographer-detail {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: lighten($color-secondary, 10);
+  width: 270px;
+  font-size: 20px;
+  border-radius: 4px;
+  margin-left: auto;
+  margin-right: 24px;
+  position: sticky;
+  bottom: 0;
+  #like {
+    display: flex;
+  }
+  .fa-heart {
+    margin-top: 24px;
+    font-size: 16px;
+    margin-left: 4px;
+  }
+}
+
+//modal contact
+#bground {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(250, 250, 250, 0.40);
+  #form-modal {
+    width: 400px;
+    height: auto;
+    background-color: lighten($color-secondary, 10);
+    padding: 16px 24px;
+    border-radius: 4px;
+    margin: 5% auto;
+    #contact-close {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      h1 {
+        margin: 0;
+        font-size: 40px;
+      }
+      .close-action {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .fa-times {
+        margin-top: 8px;
+        color: white;
+      }
+    }
+    .formulaire {
+      display: flex;
+      flex-direction: column;
+      label {
+        font-size: 24px;
+      }
+    }
+    input {
+      border: none;
+      height: 40px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    #message {
+      height: 120px;
+      margin-bottom: 16px;
+    }
+    .button {
+      @include button;
+    }
+  }
+}
+
+.icon {
+  font-size: 40px;
+}
+
+// drop down
+#select-menu {
+  display: flex;
+  margin-bottom: 24px;
+}
+
+.select-box {
+  width: 15%;
+  position: relative;
+  display: block;
+  font-size: 16px;
+  color: white;
+  margin-left: 16px;
+  &__current {
+    position: relative;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+    cursor: pointer;
+    outline: none;
+    &:focus {
+      & + .select-box__list {
+        opacity: 1;
+        animation-name: none;
+        .select-box__option {
+          cursor: pointer;
+        }
+      }
+      .fa-chevron-down {
+        transform: translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+  .fa-chevron-down {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    width: 20px;
+    transition: 0.2s ease;
+    color: white;
+  }
+  &__value {
+    display: flex;
+  }
+  &__input {
+    display: none;
+    &:checked + .select-box__input-text {
+      display: block;
+      border-radius: 4px;
+    }
+  }
+  &__input-text {
+    display: none;
+    width: 100%;
+    margin: 0;
+    padding: 15px;
+    background-color: $color-primary;
+  }
+  &__list {
+    z-index: 2;
+    position: absolute;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    opacity: 0;
+    margin-top: 0;
+    li:last-of-type label{
+      border-radius: 0 0 4px 4px;
+    }
+    animation-name: HideList;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: step-start;
+    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
+  }
+  &__option {
+    display: block;
+    padding: 15px;
+    background-color: $color-primary;
+    &:hover, &:focus {
+      color: black;
+      background-color: $color-secondary;
+    }
+  }
+}
+
+@keyframes HideList {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+
+// lightbox
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: white;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: auto;
+  padding: 0;
+  width: 80%;
+  max-width: 1200px;
+  .close {
+    color: $color-primary;
+    position: absolute;
+    right: -40px;
+    top: 32px;
+    font-size: 40px;
+    font-weight: bold;
+    &:hover, &:focus {
+      color: $color-secondary;
+      text-decoration: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.slides {
+  display: none;
+  .image {
+    display: block;
+    width: 1000px;
+    height: 895px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    border-radius: 4px;
+    box-shadow: 4px 0 darken($color-tertiary, 20);
+    outline: none;
+  }
+  p {
+    margin-left: 11%;
+    margin-top: 8px;
+    color: $color-primary;
+  }
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  width: auto;
+  margin-top: 40%;
+  color: $color-primary;
+  font-size: 32px;
+  &:hover, &:focus {
+    color: $color-secondary;
+  }
+}
+
+.next {
+  right: -32px;
+}
+
+.prev {
+  left: -32px;
+}
