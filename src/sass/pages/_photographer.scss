@@ -58,7 +58,6 @@
     .image-description {
       display: flex;
       justify-content: space-between;
-      width: 250px;
       color: $color-primary;
       #likes {
         display: flex;
@@ -134,7 +133,7 @@
         color: white;
       }
     }
-    .formulaire {
+    .form-info {
       display: flex;
       flex-direction: column;
       label {
@@ -168,11 +167,12 @@
 }
 
 .select-box {
-  width: 15%;
+  width: 14%;
   position: relative;
   display: block;
   font-size: 16px;
   color: white;
+  margin-top: 4px;
   margin-left: 16px;
   &__current {
     position: relative;
@@ -209,13 +209,15 @@
     &:checked + .select-box__input-text {
       display: block;
       border-radius: 4px;
+      border-bottom: solid 1px #FAFAFA;
+
     }
   }
   &__input-text {
     display: none;
     width: 100%;
     margin: 0;
-    padding: 15px;
+    padding: 14px;
     background-color: $color-primary;
   }
   &__list {
@@ -228,18 +230,19 @@
     margin-top: 0;
     li:last-of-type label{
       border-radius: 0 0 4px 4px;
+      border-bottom: none;
     }
     animation-name: HideList;
     animation-duration: 0.5s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
     animation-timing-function: step-start;
-    box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
   }
   &__option {
     display: block;
-    padding: 15px;
     background-color: $color-primary;
+    padding: 14px;
+    border-bottom: solid 1px $color-tertiary;
     &:hover, &:focus {
       color: black;
       background-color: $color-secondary;

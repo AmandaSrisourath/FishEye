@@ -176,7 +176,6 @@ main .presentation .photograph .tag-all {
 #all-album .album .image-description {
   display: flex;
   justify-content: space-between;
-  width: 250px;
   color: #901C1C;
 }
 #all-album .album .image-description #likes {
@@ -249,11 +248,11 @@ main .presentation .photograph .tag-all {
   margin-top: 8px;
   color: white;
 }
-#bground #form-modal .formulaire {
+#bground #form-modal .form-info {
   display: flex;
   flex-direction: column;
 }
-#bground #form-modal .formulaire label {
+#bground #form-modal .form-info label {
   font-size: 24px;
 }
 #bground #form-modal input {
@@ -291,11 +290,12 @@ main .presentation .photograph .tag-all {
 }
 
 .select-box {
-  width: 15%;
+  width: 14%;
   position: relative;
   display: block;
   font-size: 16px;
   color: white;
+  margin-top: 4px;
   margin-left: 16px;
 }
 .select-box__current {
@@ -332,12 +332,13 @@ main .presentation .photograph .tag-all {
 .select-box__input:checked + .select-box__input-text {
   display: block;
   border-radius: 4px;
+  border-bottom: solid 1px #FAFAFA;
 }
 .select-box__input-text {
   display: none;
   width: 100%;
   margin: 0;
-  padding: 15px;
+  padding: 14px;
   background-color: #901C1C;
 }
 .select-box__list {
@@ -353,15 +354,16 @@ main .presentation .photograph .tag-all {
   animation-delay: 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: step-start;
-  box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
 }
 .select-box__list li:last-of-type label {
   border-radius: 0 0 4px 4px;
+  border-bottom: none;
 }
 .select-box__option {
   display: block;
-  padding: 15px;
   background-color: #901C1C;
+  padding: 14px;
+  border-bottom: solid 1px #FAFAFA;
 }
 .select-box__option:hover, .select-box__option:focus {
   color: black;
