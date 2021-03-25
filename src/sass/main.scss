@@ -3,3 +3,10 @@
 @import "base/fonts";
 @import "pages/home";
 @import "pages/photographer";
+
+body {
+  width: 66%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'abelregular', Arial, Helvetica, sans-serif;
+}
