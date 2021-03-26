@@ -201,6 +201,11 @@ main .presentation .photograph .tag-all {
   justify-content: space-between;
   color: #901C1C;
 }
+#all-album .album .image-description #price-like {
+  display: flex;
+  justify-content: space-between;
+  width: 90px;
+}
 #all-album .album .image-description #likes {
   display: flex;
 }
@@ -212,7 +217,7 @@ main .presentation .photograph .tag-all {
 #all-album .album .image-description p {
   font-size: 20px;
   margin-top: 6px;
-  margin-bottom: 0px;
+  margin-bottom: 0;
 }
 
 #photographer-detail {
@@ -426,7 +431,7 @@ main .presentation .photograph .tag-all {
 .modal-content .close {
   color: #901C1C;
   position: absolute;
-  right: -40px;
+  right: 14%;
   top: 32px;
   font-size: 40px;
   font-weight: bold;
@@ -442,8 +447,8 @@ main .presentation .photograph .tag-all {
 }
 .slides .image {
   display: block;
-  width: 1000px;
-  height: 895px;
+  width: 50%;
+  height: 600px;
   object-fit: cover;
   margin-left: auto;
   margin-right: auto;
@@ -453,7 +458,9 @@ main .presentation .photograph .tag-all {
   outline: none;
 }
 .slides p {
-  margin-left: 11%;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 8px;
   color: #901C1C;
 }
@@ -462,7 +469,7 @@ main .presentation .photograph .tag-all {
   cursor: pointer;
   position: absolute;
   width: auto;
-  margin-top: 40%;
+  margin-top: 300px;
   color: #901C1C;
   font-size: 32px;
 }
@@ -471,19 +478,19 @@ main .presentation .photograph .tag-all {
 }
 
 .next {
-  right: -32px;
+  right: 15%;
 }
 
 .prev {
-  left: -32px;
+  left: 15%;
 }
 
-@media only screen and (min-width: 375px) and (max-width: 767px) {
+@media only screen and (max-width: 767px) {
   #mobile-body {
     width: 88%;
   }
 
-  #photographer-detail, .button, #select-menu {
+  #photographer-detail, #select-menu {
     display: none;
   }
 
@@ -505,11 +512,66 @@ main .presentation .photograph .tag-all {
   }
 
   #all-album .album {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
   }
 
   #photographer-header {
     margin-bottom: 16px;
+  }
+
+  input#contact-btn.button {
+    display: flex;
+    font-size: 14px;
+    position: fixed;
+    bottom: 0;
+    padding: 6px 24px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #bground #form-modal {
+    width: 88%;
+    height: 100%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #bground #form-modal #message {
+    height: 200px;
+  }
+  #bground #form-modal input.button {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 6px 24px;
+  }
+
+  .slides .image {
+    width: 300px;
+    height: 300px;
+    margin-top: 150px;
+  }
+  .slides p {
+    width: 300px;
+  }
+
+  .prev, .next {
+    top: -24px;
+    font-size: 20px;
+  }
+
+  .prev {
+    left: -16px;
+  }
+
+  .next {
+    right: -21px;
+  }
+
+  .modal-content .close {
+    top: 145px;
+    right: -24px;
+    font-size: 20px;
   }
 }
 body {

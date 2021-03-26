@@ -168,11 +168,13 @@ function createMedias(medias) {
                             ${media.getHTML}
                             <div class="image-description">
                                 <p>${media.title}</p>
+                                <div id="price-like">
                                 <p>${media.price}€</p>
                                 <div id="likes">
                                     <p>${media.likes}</p>
                                     <i class="fas fa-heart"></i>
                                 </div>
+                            </div>
                             </div>
                          </div>`
         document.querySelector('#all-album').appendChild(div);
