@@ -1,8 +1,16 @@
 import data from './data.json';
 
+const urlParams = new URLSearchParams(window.location.search);
+const selectedTag = urlParams.get('tag');
+
 const photographers = data.photographers;
 
-createPhotographers(photographers);
+if (selectedTag) {
+    filterAndCreatePhotographers(selectedTag);
+} else {
+    createPhotographers(photographers);
+}
+
 const tags = data.tags;
 
 tags.forEach((tag) => {

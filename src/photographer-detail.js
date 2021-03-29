@@ -1,9 +1,7 @@
 import data from './data.json';
 
 const queryString = window.location.search;
-
 const urlParams = new URLSearchParams(queryString);
-
 const id = urlParams.get('id');
 
 const photographers = data.photographers;
@@ -22,6 +20,7 @@ photographerSlogan.innerHTML = foundPhotographer.tagline;
 foundPhotographer.tags.forEach((tag) => {
     const photographerTags = document.querySelector('#photographer-tags');
     const link = document.createElement('a');
+    link.href = `../index.html?tag=${tag}`;
     link.classList.add("tag");
     link.innerHTML = `#${tag}`
     photographerTags.appendChild(link);

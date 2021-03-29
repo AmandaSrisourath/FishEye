@@ -517,15 +517,16 @@ main .presentation .photograph .tag-all {
     margin-bottom: 16px;
   }
 
-  input#contact-btn.button {
+  #photographer-contact input#contact-btn {
     display: flex;
+    justify-content: center;
+    width: 140px;
     font-size: 14px;
     position: fixed;
     bottom: 0;
-    padding: 6px 24px;
-    margin-bottom: 24px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 6px;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
   }
 

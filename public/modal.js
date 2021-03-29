@@ -18,7 +18,6 @@ closeModalBtn.forEach((elt) => elt.addEventListener("click", closeModal));
 function closeModal() {
     modalbg.style.display = "none";
 }
-
 /******/ })()
 ;
 //# sourceMappingURL=modal.js.map

@@ -60,9 +60,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data.json */ "./src/data.json");
 
 
+const urlParams = new URLSearchParams(window.location.search);
+const selectedTag = urlParams.get('tag');
+
 const photographers = _data_json__WEBPACK_IMPORTED_MODULE_0__.photographers;
 
-createPhotographers(photographers);
+if (selectedTag) {
+    filterAndCreatePhotographers(selectedTag);
+} else {
+    createPhotographers(photographers);
+}
+
 const tags = _data_json__WEBPACK_IMPORTED_MODULE_0__.tags;
 
 tags.forEach((tag) => {
