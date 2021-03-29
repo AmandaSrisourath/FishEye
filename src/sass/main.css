@@ -206,6 +206,8 @@ main .presentation .photograph .tag-all {
   margin-left: 4px;
   margin-top: 10px;
   font-size: 17px;
+  cursor: pointer;
+  outline: none;
 }
 #all-album .album .image-description p {
   font-size: 20px;

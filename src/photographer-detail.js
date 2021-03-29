@@ -111,7 +111,7 @@ function createMedias(medias) {
                                 <p>${media.price}€</p>
                                 <div id="likes">
                                     <p>${media.likes}</p>
-                                    <i class="fas fa-heart"></i>
+                                    <span class="heart"><i class="fas fa-heart"></i></span>
                                 </div>
                             </div>
                             </div>
@@ -196,3 +196,15 @@ function showSlides(n) {
     }
     slides[slideIndex-1].style.display = "block";
 }
+
+const likes = document.querySelectorAll('.heart');
+
+likes.forEach((icon) => {
+    icon.addEventListener("click", function(e) {
+        e.preventDefault();
+        const likesNumberElt = icon.previousElementSibling;
+        let likesNumberValue = likesNumberElt.innerHTML;
+        likesNumberValue++;
+        likesNumberElt.innerHTML = likesNumberValue;
+    });
+});
