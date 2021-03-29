@@ -64,7 +64,7 @@ const queryString = window.location.search;
 
 const urlParams = new URLSearchParams(queryString);
 
-const id = urlParams.get('id')
+const id = urlParams.get('id');
 
 const photographers = _data_json__WEBPACK_IMPORTED_MODULE_0__.photographers;
 

@@ -7,7 +7,6 @@ const tags = data.tags;
 
 tags.forEach((tag) => {
     const nav = document.querySelector('#navigation');
-    const mobileNav = document.querySelector('#mobile-nav');
     const link = document.createElement('a');
     link.classList.add("tag");
     link.dataset.name = tag;
@@ -16,7 +15,6 @@ tags.forEach((tag) => {
         filterAndCreatePhotographers(tag);
     });
     nav.appendChild(link);
-    mobileNav.appendChild(link.cloneNode(true));
 });
 
 function filterAndCreatePhotographers(tag) {
