@@ -198,6 +198,7 @@ function showSlides(n) {
 }
 
 const likes = document.querySelectorAll('.heart');
+let totalLikes = document.querySelector('#total-likes');
 
 likes.forEach((icon) => {
     icon.addEventListener("click", function() {
@@ -205,5 +206,10 @@ likes.forEach((icon) => {
         let likesNumberValue = likesNumberElt.innerHTML;
         likesNumberValue++;
         likesNumberElt.innerHTML = likesNumberValue;
+
+        let totalLikesNumberValue = totalLikes.innerHTML;
+        totalLikesNumberValue++;
+        totalLikes.innerHTML = totalLikesNumberValue;
+        console.log(totalLikesNumberValue);
     });
 });
