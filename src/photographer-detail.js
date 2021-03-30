@@ -200,8 +200,7 @@ function showSlides(n) {
 const likes = document.querySelectorAll('.heart');
 
 likes.forEach((icon) => {
-    icon.addEventListener("click", function(e) {
-        e.preventDefault();
+    icon.addEventListener("click", function() {
         const likesNumberElt = icon.previousElementSibling;
         let likesNumberValue = likesNumberElt.innerHTML;
         likesNumberValue++;

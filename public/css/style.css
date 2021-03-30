@@ -37,7 +37,7 @@ nav .tag {
   text-decoration: none;
   border: solid 1px #e1e1e1;
   border-radius: 32px 32px;
-  padding: 2px 6px;
+  padding: 2px 4px;
   margin-left: 2px;
   margin-right: 2px;
   margin-bottom: 4px;
@@ -207,7 +207,6 @@ main .presentation .photograph .tag-all {
   margin-top: 10px;
   font-size: 17px;
   cursor: pointer;
-  outline: none;
 }
 #all-album .album .image-description p {
   font-size: 20px;
@@ -494,8 +493,8 @@ main .presentation .photograph .tag-all {
   }
 
   .profile-picture {
-    width: 99px;
-    height: 99px;
+    width: 100px;
+    height: 100px;
     margin-top: 10px;
   }
 
@@ -505,14 +504,13 @@ main .presentation .photograph .tag-all {
     margin-bottom: 48px;
   }
 
+  #all-album .album {
+    margin-bottom: 8px;
+  }
   #all-album .album .image {
     width: 100%;
     height: 200px;
     object-position: top;
-  }
-
-  #all-album .album {
-    margin-bottom: 8px;
   }
 
   #photographer-header {
