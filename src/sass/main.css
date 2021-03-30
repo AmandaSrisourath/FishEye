@@ -165,7 +165,6 @@ main .presentation .photograph .tag-all {
   border: none;
   border-radius: 6px 6px;
   padding: 14px 8px;
-  outline: none;
 }
 .photographer-navigation #photographer-contact .button:hover {
   color: black;
@@ -187,7 +186,6 @@ main .presentation .photograph .tag-all {
   border-radius: 4px;
   cursor: pointer;
   object-fit: cover;
-  outline: none;
 }
 #all-album .album .image-description {
   display: flex;
@@ -295,7 +293,6 @@ main .presentation .photograph .tag-all {
   border: none;
   border-radius: 6px 6px;
   padding: 14px 8px;
-  outline: none;
 }
 #bground #form-modal .button:hover {
   color: black;

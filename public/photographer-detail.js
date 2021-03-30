@@ -108,7 +108,7 @@ function Factory() {
 }
 
 let Image = function (media) {
-    this.getHTML = `<img class="hover-shadow open-lightbox image" alt="" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
+    this.getHTML = `<img aria-labelby="${media.title}" alt="" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -121,7 +121,7 @@ let Image = function (media) {
 };
 
 let Video = function (media) {
-    this.getHTML = `<video class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}" controls><source src="movie.mp4" type="video/mp4"></video>`;
+    this.getHTML = `<video aria-labelby="${media.title}" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}" controls><source src="movie.mp4" type="video/mp4"></video>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -154,10 +154,10 @@ function createMedias(medias) {
     mediaDiv.innerHTML = "";
 
     const modalDiv = document.querySelector('#myModal');
-    modalDiv.innerHTML = `<div class="modal-content">
-                            <span id="close-lightbox" class="close" >&times;</span>
-                            <a id="prev-image" class="prev">&#10094;</a>
-                            <a id="next-image" class="next">&#10095;</a>
+    modalDiv.innerHTML = `<div aria-label="image closeup view" class="modal-content">
+                            <span aria-label="Close dialog" id="close-lightbox" class="close" >&times;</span>
+                            <a aria-label="Previous image" id="prev-image" class="prev">&#10094;</a>
+                            <a aria-label="Next image" id="next-image" class="next">&#10095;</a>
                           </div>`;
 
     medias.forEach((media) => {
@@ -169,7 +169,7 @@ function createMedias(medias) {
                                 <p>${media.title}</p>
                                 <div id="price-like">
                                 <p>${media.price}€</p>
-                                <div id="likes">
+                                <div id="likes" aria-label="likes">
                                     <p>${media.likes}</p>
                                     <span class="heart"><i class="fas fa-heart"></i></span>
                                 </div>

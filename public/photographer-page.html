@@ -27,32 +27,32 @@
                 </div>
             </div>
             <div>
-                <input type="button" value="Contactez-moi" id="contact-btn" class="button" role="button" aria-pressed="false">
+                <input type="button" value="Contactez-moi" id="contact-btn" class="button" role="button" aria-label="Contact me" aria-pressed="false">
             </div>
         </div>
         <div>
-            <img class="profile-picture" role="img" aria-label="Photo de profile"/>
+            <img class="profile-picture" alt="" aria-label="Photo de profile"/>
         </div>
     </nav>
 
     <main id="photographer-main" role="main">
-       <div id="select-menu" role="navigation" aria-label="Filter">
+       <div id="select-menu" role="navigation" aria-label="Order by">
            <div>
                <p>Trier par</p>
            </div>
 
-           <div class="select-box">
+           <div class="select-box" role="lbutton" aria-haspopup="listbox" aria-expanded="true">
                <div class="select-box__current" tabindex="1">
-                   <div class="select-box__value">
-                       <input class="select-box__input" type="radio" id="popularity" value="popularity" name="filter" checked="checked" />
+                   <div class="select-box__value" role="listbox" aria-orientation="vertical" aria-expanded="true" aria-selected="true">
+                       <input class="select-box__input" type="radio" id="popularity" value="popularity" name="filter" checked="checked"/>
                        <p class="select-box__input-text">Popularité</p>
                    </div>
-                   <div class="select-box__value">
-                       <input class="select-box__input" type="radio" id="date" value="date" name="filter" />
+                   <div class="select-box__value" role="listbox" aria-orientation="vertical" aria-expanded="true" aria-selected="false">
+                       <input class="select-box__input" type="radio" id="date" value="date" name="filter"/>
                        <p class="select-box__input-text">Date</p>
                    </div>
-                   <div class="select-box__value">
-                       <input class="select-box__input" type="radio" id="title" value="title" name="filter" />
+                   <div class="select-box__value" role="listbox" aria-orientation="vertical" aria-expanded="true" aria-selected="false">
+                       <input class="select-box__input" type="radio" id="title" value="title" name="filter"/>
                        <p class="select-box__input-text">Titre</p>
                    </div>
                    <i class="fas fa-chevron-down"></i>
@@ -87,30 +87,30 @@
                     <h1>Contactez-moi</h1>
                     <h1 id="photographer-name-contact">Mimi Keel</h1>
                 </div>
-                <div class="close-action">
+                <div role="button" aria-label="Close Contact form" class="close-action">
                     <i class="fas fa-times icon"></i>
                 </div>
             </div>
 
-            <form role="form" aria-label="Contact information">
+            <form role="dialog" aria-label="Contact me">
                 <div class="form-info">
-                    <label for="name">Prénom</label>
-                    <input type="text" name="name" id="name" required>
+                    <label id="First_name" for="name">Prénom</label>
+                    <input role="text field" aria-labelledby="First_name" type="text" name="name" id="name" required>
                 </div>
                 <div class="form-info">
-                    <label for="last-name">Nom</label>
-                    <input type="text" name="last-name" id="last-name" required>
+                    <label id="Last_name" for="last-name">Nom</label>
+                    <input role="text field" aria-labelledby="Last_name" type="text" name="last-name" id="last-name" required>
                 </div>
                 <div class="form-info">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
+                    <label id="Mail" for="email">Email</label>
+                    <input role="text field" aria-labelledby="Mail" type="email" name="email" id="email" required>
                 </div>
                 <div class="form-info">
-                    <label for="message">Votre message</label>
-                    <input type="textarea" name="message" id="message" required>
+                    <label id="Your_message" for="message">Votre message</label>
+                    <input role="text field" aria-labelledby="Your_message" type="textarea" name="message" id="message" required>
                 </div>
                 <div class="form-info">
-                    <input id="submit-btn" type="submit" value="Envoyer" class="button">
+                    <input role="button" aria-label="Send" id="submit-btn" type="submit" value="Envoyer" class="button">
                 </div>
             </form>
         </div>
