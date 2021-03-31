@@ -22,6 +22,8 @@
   "homepage": "https://github.com/AmandaSrisourath/AmandaSrisourath_6_22022021#readme",
   "browserslist": "last 4 versions",
   "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-plugin-react": "^7.23.1",
     "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0"
   }

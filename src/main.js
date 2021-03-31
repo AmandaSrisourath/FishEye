@@ -1,7 +1,7 @@
-import data from './data.json';
+import data from "./data.json";
 
 const urlParams = new URLSearchParams(window.location.search);
-const selectedTag = urlParams.get('tag');
+const selectedTag = urlParams.get("tag");
 
 const photographers = data.photographers;
 
@@ -14,19 +14,19 @@ if (selectedTag) {
 const tags = data.tags;
 
 tags.forEach((tag) => {
-    const nav = document.querySelector('#navigation');
-    const link = document.createElement('a');
+    const nav = document.querySelector("#navigation");
+    const link = document.createElement("a");
     link.classList.add("tag");
     link.dataset.name = tag;
-    link.innerHTML = `#${tag}`
-    link.addEventListener('click', function(event) {
+    link.innerHTML = `#${tag}`;
+    link.addEventListener("click", function() {
         filterAndCreatePhotographers(tag);
     });
     nav.appendChild(link);
 });
 
 function filterAndCreatePhotographers(tag) {
-    const photographersDiv = document.getElementById('photographers');
+    const photographersDiv = document.getElementById("photographers");
     photographersDiv.innerHTML = "";
 
     const photographersFiltered = photographers.filter((artist) => artist.tags.includes(tag));
@@ -35,7 +35,7 @@ function filterAndCreatePhotographers(tag) {
 
 function createPhotographers(photographers) {
     photographers.forEach((photographer) => {
-        const div = document.createElement('div');
+        const div = document.createElement("div");
         div.classList.add("photograph");
         div.innerHTML = `<a href="public/photographer-page.html?id=${photographer.id}">
                             <div role="img" aria-label="${photographer.name}">
@@ -47,18 +47,18 @@ function createPhotographers(photographers) {
                             <p class="location"> ${photographer.city}, ${photographer.country} </p>
                             <p class="slogan" role="tag"> ${photographer.tagline} </p>
                             <p class="price"> ${photographer.price}€/jour </p>
-                         </div>`
-        const divTag = document.createElement('div');
+                         </div>`;
+        const divTag = document.createElement("div");
         photographer.tags.forEach((tag) => {
-            const link = document.createElement('a');
-            link.innerHTML = '#' + tag;
+            const link = document.createElement("a");
+            link.innerHTML = "#" + tag;
             link.classList.add("tag");
-            link.addEventListener('click', function(event) {
+            link.addEventListener("click", function() {
                 filterAndCreatePhotographers(tag);
             });
             divTag.appendChild(link);
         });
         div.appendChild(divTag);
-        document.getElementById('photographers').appendChild(div);
+        document.getElementById("photographers").appendChild(div);
     });
 }

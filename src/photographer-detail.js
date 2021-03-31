@@ -1,35 +1,35 @@
-import data from './data.json';
+import data from "./data.json";
 
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
-const id = urlParams.get('id');
+const id = urlParams.get("id");
 
 const photographers = data.photographers;
 
 const foundPhotographer = photographers.find(photographer => photographer.id === parseInt(id, 10));
 
-const photographerName = document.querySelector('#photographer-name');
+const photographerName = document.querySelector("#photographer-name");
 photographerName.innerHTML = foundPhotographer.name;
 
-const photographerLocation = document.querySelector('.location');
+const photographerLocation = document.querySelector(".location");
 photographerLocation.innerHTML = `${foundPhotographer.city}, ${foundPhotographer.country}`;
 
-const photographerSlogan = document.querySelector('.slogan');
+const photographerSlogan = document.querySelector(".slogan");
 photographerSlogan.innerHTML = foundPhotographer.tagline;
 
 foundPhotographer.tags.forEach((tag) => {
-    const photographerTags = document.querySelector('#photographer-tags');
-    const link = document.createElement('a');
+    const photographerTags = document.querySelector("#photographer-tags");
+    const link = document.createElement("a");
     link.href = `../index.html?tag=${tag}`;
     link.classList.add("tag");
-    link.innerHTML = `#${tag}`
+    link.innerHTML = `#${tag}`;
     photographerTags.appendChild(link);
 });
 
-const photographerPortrait = document.querySelector('.profile-picture');
+const photographerPortrait = document.querySelector(".profile-picture");
 photographerPortrait.src = `./portraitPicture/${foundPhotographer.portrait}`;
 
-const photographerPrice = document.querySelector('#price');
+const photographerPrice = document.querySelector("#price");
 photographerPrice.innerHTML = foundPhotographer.price;
 
 let medias = [];
@@ -44,11 +44,11 @@ function Factory() {
             newMedia = new Video(media);
         }
         return newMedia;
-    }
+    };
 }
 
 let Image = function (media) {
-    this.getHTML = `<img aria-labelby="${media.title}" alt="" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
+    this.getHTML = `<img alt="" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -61,7 +61,7 @@ let Image = function (media) {
 };
 
 let Video = function (media) {
-    this.getHTML = `<video aria-labelby="${media.title}" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}" controls><source src="movie.mp4" type="video/mp4"></video>`;
+    this.getHTML = `<video class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}" controls><source src="movie.mp4" type="video/mp4"></video>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -90,10 +90,10 @@ function run () {
 run();
 
 function createMedias(medias) {
-    const mediaDiv = document.querySelector('#all-album');
+    const mediaDiv = document.querySelector("#all-album");
     mediaDiv.innerHTML = "";
 
-    const modalDiv = document.querySelector('#myModal');
+    const modalDiv = document.querySelector("#myModal");
     modalDiv.innerHTML = `<div aria-label="image closeup view" class="modal-content">
                             <span aria-label="Close dialog" id="close-lightbox" class="close" >&times;</span>
                             <a aria-label="Previous image" id="prev-image" class="prev">&#10094;</a>
@@ -101,7 +101,7 @@ function createMedias(medias) {
                           </div>`;
 
     medias.forEach((media) => {
-        const div = document.createElement('div');
+        const div = document.createElement("div");
         div.classList.add("album");
         div.innerHTML = `<div class="album">
                             ${media.getHTML}
@@ -115,14 +115,14 @@ function createMedias(medias) {
                                 </div>
                             </div>
                             </div>
-                         </div>`
-        document.querySelector('#all-album').appendChild(div);
+                         </div>`;
+        document.querySelector("#all-album").appendChild(div);
 
-        const divLightbox = document.createElement('div');
-        divLightbox.classList.add('slides');
+        const divLightbox = document.createElement("div");
+        divLightbox.classList.add("slides");
         divLightbox.innerHTML = `${media.getHTML}    
-                                 <p>${media.title}</p>`
-        document.querySelector('#myModal').appendChild(divLightbox);
+                                 <p>${media.title}</p>`;
+        document.querySelector("#myModal").appendChild(divLightbox);
     });
     const openLightbox = document.querySelectorAll(".open-lightbox");
     openLightbox.forEach((elt, index) => elt.addEventListener("click",() => {
@@ -143,13 +143,13 @@ function createMedias(medias) {
     });
 }
 
-const selects = document.querySelectorAll('.select-box__input');
+const selects = document.querySelectorAll(".select-box__input");
 
 selects.forEach((input) => input.addEventListener("change",(event) => {
     const filter = event.target.value;
     if (filter === "date") {
         medias.sort((a, b) =>  {
-            return new Date(b.date) - new Date(a.date)
+            return new Date(b.date) - new Date(a.date);
         });
     } else if (filter === "title") {
         medias.sort((a, b) =>  {
@@ -197,8 +197,8 @@ function showSlides(n) {
     slides[slideIndex-1].style.display = "block";
 }
 
-const likes = document.querySelectorAll('.heart');
-let totalLikes = document.querySelector('#total-likes');
+const likes = document.querySelectorAll(".heart");
+let totalLikes = document.querySelector("#total-likes");
 
 likes.forEach((icon) => {
     icon.addEventListener("click", function() {
