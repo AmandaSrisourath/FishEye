@@ -41,16 +41,16 @@
                <p>Trier par</p>
            </div>
 
-           <div class="select-box" role="button" aria-haspopup="listbox" aria-expanded="true">
+           <fieldset class="select-box" aria-haspopup="listbox" aria-expanded="true">
                <button class="select-box__current">
                    <input class="select-box__input" type="radio" id="popularity" value="popularity" name="filter" checked="checked"/>
-                   <p class="select-box__input-text">Popularité</p>
+                   <label class="select-box__input-text">Popularité</label>
 
                    <input class="select-box__input" type="radio" id="date" value="date" name="filter"/>
-                   <p class="select-box__input-text">Date</p>
+                   <label class="select-box__input-text">Date</label>
 
                    <input class="select-box__input" type="radio" id="title" value="title" name="filter"/>
-                   <p class="select-box__input-text">Titre</p>
+                   <label class="select-box__input-text">Titre</label>
 
                    <em aria-hidden="true" class="fas fa-chevron-down"></em>
                </button>
@@ -59,7 +59,7 @@
                    <li><label class="select-box__option" for="date" aria-hidden="true">Date</label></li>
                    <li><label class="select-box__option" for="title" aria-hidden="true">Titre</label></li>
                </ul>
-           </div>
+           </fieldset>
        </div>
 
         <div id="all-album">

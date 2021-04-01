@@ -310,10 +310,16 @@ main .presentation .photograph .tag-all {
   margin-bottom: 24px;
 }
 
+fieldset.select-box {
+  margin-top: 8px;
+  padding: 0;
+}
+
 .select-box {
-  width: 120px;
+  width: 110px;
   position: relative;
   display: block;
+  border: none;
   font-size: 16px;
   color: white;
   margin-top: 4px;
@@ -321,7 +327,7 @@ main .presentation .photograph .tag-all {
 }
 .select-box__current {
   position: relative;
-  width: 120px;
+  width: 110px;
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   outline: none;
@@ -341,7 +347,7 @@ main .presentation .photograph .tag-all {
 .select-box .fa-chevron-down {
   position: absolute;
   top: 50%;
-  right: 15px;
+  right: 8px;
   transform: translateY(-50%);
   width: 20px;
   transition: 0.2s ease;
@@ -364,6 +370,7 @@ main .presentation .photograph .tag-all {
   margin: 0;
   padding: 14px;
   background-color: #901C1C;
+  cursor: pointer;
 }
 .select-box__list {
   z-index: 2;
@@ -386,7 +393,7 @@ main .presentation .photograph .tag-all {
 .select-box__option {
   display: block;
   background-color: #901C1C;
-  padding: 14px;
+  padding: 12px;
   border-bottom: solid 1px #FAFAFA;
 }
 .select-box__option:hover, .select-box__option:focus {

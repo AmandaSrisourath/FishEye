@@ -168,17 +168,23 @@
   margin-bottom: 24px;
 }
 
+fieldset.select-box {
+  margin-top: 8px;
+  padding: 0;
+}
+
 .select-box {
-  width: 120px;
+  width: 110px;
   position: relative;
   display: block;
+  border: none;
   font-size: 16px;
   color: white;
   margin-top: 4px;
   margin-left: 16px;
   &__current {
     position: relative;
-    width: 120px;
+    width: 110px;
     box-shadow: 0 15px 30px -10px transparentize(#000, 0.9);
     cursor: pointer;
     outline: none;
@@ -200,7 +206,7 @@
   .fa-chevron-down {
     position: absolute;
     top: 50%;
-    right: 15px;
+    right: 8px;
     transform: translateY(-50%);
     width: 20px;
     transition: 0.2s ease;
@@ -223,6 +229,7 @@
     margin: 0;
     padding: 14px;
     background-color: $color-primary;
+    cursor: pointer;
   }
   &__list {
     z-index: 2;
@@ -245,7 +252,7 @@
   &__option {
     display: block;
     background-color: $color-primary;
-    padding: 14px;
+    padding: 12px;
     border-bottom: solid 1px $color-tertiary;
     &:hover, &:focus {
       color: black;
