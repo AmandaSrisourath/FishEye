@@ -35,7 +35,7 @@ nav .tag {
   font-size: 12px;
   color: #901C1C;
   text-decoration: none;
-  border: solid 1px #e1e1e1;
+  border: solid 1px #c7c7c7;
   border-radius: 32px 32px;
   padding: 2px 4px;
   margin-left: 2px;
@@ -92,7 +92,7 @@ main .presentation .photograph .slogan {
   margin-bottom: 2px;
 }
 main .presentation .photograph .price {
-  color: #aeaeae;
+  color: #7b7b7b;
   margin-top: 2px;
   margin-bottom: 2px;
 }
@@ -321,9 +321,12 @@ main .presentation .photograph .tag-all {
 }
 .select-box__current {
   position: relative;
+  width: 120px;
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   outline: none;
+  padding: 0;
+  border: none;
 }
 .select-box__current:focus + .select-box__list {
   opacity: 1;
@@ -351,13 +354,13 @@ main .presentation .photograph .tag-all {
   display: none;
 }
 .select-box__input:checked + .select-box__input-text {
-  display: block;
+  display: flex;
   border-radius: 4px;
   border-bottom: solid 1px #FAFAFA;
 }
 .select-box__input-text {
   display: none;
-  width: 100%;
+  color: white;
   margin: 0;
   padding: 14px;
   background-color: #901C1C;

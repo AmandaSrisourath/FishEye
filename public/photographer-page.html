@@ -42,21 +42,18 @@
            </div>
 
            <div class="select-box" role="button" aria-haspopup="listbox" aria-expanded="true">
-               <div class="select-box__current" tabindex="1">
-                   <div class="select-box__value" role="listbox" aria-orientation="vertical" aria-expanded="true" aria-selected="true">
-                       <input class="select-box__input" type="radio" id="popularity" value="popularity" name="filter" checked="checked"/>
-                       <p class="select-box__input-text">Popularité</p>
-                   </div>
-                   <div class="select-box__value" role="listbox" aria-orientation="vertical" aria-expanded="true" aria-selected="false">
-                       <input class="select-box__input" type="radio" id="date" value="date" name="filter"/>
-                       <p class="select-box__input-text">Date</p>
-                   </div>
-                   <div class="select-box__value" role="listbox" aria-orientation="vertical" aria-expanded="true" aria-selected="false">
-                       <input class="select-box__input" type="radio" id="title" value="title" name="filter"/>
-                       <p class="select-box__input-text">Titre</p>
-                   </div>
+               <button class="select-box__current">
+                   <input class="select-box__input" type="radio" id="popularity" value="popularity" name="filter" checked="checked"/>
+                   <p class="select-box__input-text">Popularité</p>
+
+                   <input class="select-box__input" type="radio" id="date" value="date" name="filter"/>
+                   <p class="select-box__input-text">Date</p>
+
+                   <input class="select-box__input" type="radio" id="title" value="title" name="filter"/>
+                   <p class="select-box__input-text">Titre</p>
+
                    <em aria-hidden="true" class="fas fa-chevron-down"></em>
-               </div>
+               </button>
                <ul class="select-box__list">
                    <li><label class="select-box__option" for="popularity" aria-hidden="true">Popularité</label></li>
                    <li><label class="select-box__option" for="date" aria-hidden="true">Date</label></li>
