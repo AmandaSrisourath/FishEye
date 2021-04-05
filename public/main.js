@@ -105,7 +105,7 @@ function createPhotographers(photographers) {
                          </a>
                          <div>
                             <p class="location"> ${photographer.city}, ${photographer.country} </p>
-                            <p class="slogan" role="tag"> ${photographer.tagline} </p>
+                            <p class="slogan" ${photographer.tagline} </p>
                             <p class="price"> ${photographer.price}€/jour </p>
                          </div>`;
         const divTag = document.createElement("div");

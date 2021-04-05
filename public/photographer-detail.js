@@ -60,6 +60,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _data_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data.json */ "./src/data.json");
 
 
+let lastFocusedElt;
+
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get("id");
@@ -108,7 +110,7 @@ function Factory() {
 }
 
 let Image = function (media) {
-    this.getHTML = `<img alt="" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
+    this.getHTML = `<img tabindex="0" alt="" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -155,9 +157,9 @@ function createMedias(medias) {
 
     const modalDiv = document.querySelector("#myModal");
     modalDiv.innerHTML = `<div aria-label="image closeup view" class="modal-content">
-                            <span aria-label="Close dialog" id="close-lightbox" class="close" >&times;</span>
-                            <a aria-label="Previous image" id="prev-image" class="prev">&#10094;</a>
-                            <a aria-label="Next image" id="next-image" class="next">&#10095;</a>
+                            <span tabindex="1" aria-label="Close dialog" id="close-lightbox" class="close" >&times;</span>
+                            <a tabindex="1" aria-label="Previous image" id="prev-image" class="prev">&#10094;</a>
+                            <a tabindex="1" aria-label="Next image" id="next-image" class="next">&#10095;</a>
                           </div>`;
 
     medias.forEach((media) => {
@@ -184,23 +186,59 @@ function createMedias(medias) {
                                  <p>${media.title}</p>`;
         document.querySelector("#myModal").appendChild(divLightbox);
     });
+
     const openLightbox = document.querySelectorAll(".open-lightbox");
-    openLightbox.forEach((elt, index) => elt.addEventListener("click",() => {
-        openModal();
-        currentSlide(index +1);
-    }));
+    openLightbox.forEach((elt, index) => {
+        elt.addEventListener("click",() => {
+            openLightboxOnEvent(index);
+        });
+        elt.addEventListener("keydown", (event) => {
+            if (event.keyCode === 13 || event.keyCode ===32) {
+                openLightboxOnEvent(index);
+            }
+        });
+    });
+
     const closeLightboxModal = document.querySelector("#close-lightbox");
     closeLightboxModal.addEventListener("click",(closeLightbox));
+    closeLightboxModal.addEventListener("keydown", (event) => {
+       if (event.keyCode === 13 || event.keyCode ===32) {
+           closeLightbox();
+       }
+    });
 
     const prevSlide = document.querySelector("#prev-image");
     prevSlide.addEventListener("click", function() {
-        plusSlides(-1);
+        previousImages();
+    });
+    prevSlide.addEventListener("keydown", (event) => {
+        if (event.keyCode === 13 || event.keyCode ===32) {
+            previousImages();
+        }
     });
 
     const nextSlide = document.querySelector("#next-image");
     nextSlide.addEventListener("click", function() {
-        plusSlides(1);
+        nextImages();
     });
+    nextSlide.addEventListener("keydown", (event) => {
+        if (event.keyCode === 13 || event.keyCode ===32) {
+            nextImages();
+        }
+    });
+}
+
+function openLightboxOnEvent(index) {
+    openModal();
+    currentSlide(index +1);
+}
+
+function previousImages() {
+    plusSlides(-1);
+}
+
+function nextImages() {
+    plusSlides(1);
 }
 
 const selects = document.querySelectorAll(".select-box__input");
@@ -224,11 +262,15 @@ selects.forEach((input) => input.addEventListener("change",(event) => {
 }));
 
 function openModal() {
-    document.getElementById("myModal").style.display = "block";
+    lastFocusedElt = document.activeElement;
+    const myModal = document.getElementById("myModal");
+    myModal.style.display = "block";
+    myModal.focus();
 }
 
 function closeLightbox() {
     document.getElementById("myModal").style.display = "none";
+    lastFocusedElt.focus();
 }
 
 let slideIndex = 1;
