@@ -73,6 +73,9 @@ const foundPhotographer = photographers.find(photographer => photographer.id ===
 const photographerName = document.querySelector("#photographer-name");
 photographerName.innerHTML = foundPhotographer.name;
 
+const contactName = document.querySelector("#photographer-name-contact");
+contactName.innerHTML = `<h1> ${foundPhotographer.name}</h1>`;
+
 const photographerLocation = document.querySelector(".location");
 photographerLocation.innerHTML = `${foundPhotographer.city}, ${foundPhotographer.country}`;
 

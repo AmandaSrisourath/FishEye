@@ -310,6 +310,7 @@ fieldset.select-box {
   .image {
     display: block;
     width: 50%;
+    max-width: 750px;
     height: 600px;
     object-fit: cover;
     margin-left: auto;
@@ -321,6 +322,7 @@ fieldset.select-box {
   }
   p {
     width: 50%;
+    max-width: 750px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 8px;

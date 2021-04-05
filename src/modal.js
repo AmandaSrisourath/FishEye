@@ -8,7 +8,16 @@ function launchModal() {
     modalbg.style.display = "block";
 }
 
-closeModalBtn.forEach((elt) => elt.addEventListener("click", closeModal));
+closeModalBtn.forEach((elt) => {
+    elt.addEventListener("click",() => {
+        closeModal();
+    });
+    elt.addEventListener("keydown", (event) => {
+        if (event.keyCode === 13 || event.keyCode ===32) {
+            closeModal();
+        }
+    });
+});
 
 function closeModal() {
     modalbg.style.display = "none";
