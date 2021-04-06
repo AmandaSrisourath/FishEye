@@ -31,7 +31,7 @@
             </div>
         </div>
         <div>
-            <img class="profile-picture" alt="" aria-label="Photo de profile"/>
+            <img class="profile-picture mobile-profile-picture" alt="" aria-label="Photo de profile"/>
         </div>
     </nav>
 
@@ -42,7 +42,7 @@
            </div>
 
            <fieldset class="select-box" aria-haspopup="listbox" aria-expanded="true">
-               <button class="select-box__current">
+               <button tabindex="0" class="select-box__current">
                    <input class="select-box__input" type="radio" id="popularity" value="popularity" name="filter" checked="checked"/>
                    <label class="select-box__input-text">Popularité</label>
 
@@ -77,7 +77,7 @@
         </div>
     </main>
 
-    <div id="bGround">
+    <div tabindex="0" id="bGround">
         <div id="form-modal">
             <div id="contact-close">
                 <div id="contact-name">
@@ -85,7 +85,7 @@
                     <h1 id="photographer-name-contact"></h1>
                 </div>
                 <div role="button" aria-label="Close Contact form" class="close-action">
-                    <em tabindex="2" class="fas fa-times icon"></em>
+                    <em tabindex="0" class="fas fa-times icon"></em>
                 </div>
             </div>
 

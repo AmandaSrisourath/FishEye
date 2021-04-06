@@ -13,7 +13,7 @@ function launchModal() {
 const closeModalBtn = document.querySelectorAll(".close-action");
 function closeModal() {
     modalBg.style.display = "none";
-    lastFocusedElt.focus();
+    setTimeout(() => lastFocusedElt.focus(), 10);
 }
 
 closeModalBtn.forEach((elt) => {

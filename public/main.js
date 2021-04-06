@@ -80,9 +80,6 @@ tags.forEach((tag) => {
     link.classList.add("tag");
     link.dataset.name = tag;
     link.innerHTML = `#${tag}`;
-    link.addEventListener("click", function() {
-        filterAndCreatePhotographers(tag);
-    });
     nav.appendChild(link);
 });
 
@@ -115,9 +112,6 @@ function createPhotographers(photographers) {
             link.href = `index.html?tag=${tag}`;
             link.innerHTML = "#" + tag;
             link.classList.add("tag");
-            link.addEventListener("click", function() {
-                filterAndCreatePhotographers(tag);
-            });
             divTag.appendChild(link);
         });
         div.appendChild(divTag);

@@ -79,6 +79,7 @@ main {
 @media only screen and (min-width : 375px) and (max-width : 767px) {
   #photographer-body {
     width: 88%;
+    max-width: 500px;
   }
 
   h1#mobile-h1 {
@@ -96,5 +97,10 @@ main {
 
   nav#navigation {
     margin-top: 16px;
+  }
+
+  .profile-picture {
+    width: 160px;
+    height: 160px;
   }
 }
