@@ -92,7 +92,7 @@ main .presentation .photograph .slogan {
   margin-bottom: 2px;
 }
 main .presentation .photograph .price {
-  color: #7b7b7b;
+  color: #616161;
   margin-top: 2px;
   margin-bottom: 2px;
 }
@@ -234,7 +234,7 @@ main .presentation .photograph .tag-all {
   margin-left: 4px;
 }
 
-#bground {
+#bGround {
   display: none;
   position: fixed;
   z-index: 1;
@@ -245,7 +245,7 @@ main .presentation .photograph .tag-all {
   overflow: auto;
   background-color: rgba(250, 250, 250, 0.4);
 }
-#bground #form-modal {
+#bGround #form-modal {
   width: 400px;
   height: auto;
   background-color: #dc7b66;
@@ -253,40 +253,40 @@ main .presentation .photograph .tag-all {
   border-radius: 4px;
   margin: 5% auto;
 }
-#bground #form-modal #contact-close {
+#bGround #form-modal #contact-close {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
 }
-#bground #form-modal #contact-close h1 {
+#bGround #form-modal #contact-close h1 {
   margin: 0;
   font-size: 40px;
 }
-#bground #form-modal #contact-close .close-action:hover {
+#bGround #form-modal #contact-close .close-action:hover {
   cursor: pointer;
 }
-#bground #form-modal #contact-close .fa-times {
+#bGround #form-modal #contact-close .fa-times {
   margin-top: 8px;
   color: white;
 }
-#bground #form-modal .form-info {
+#bGround #form-modal .form-info {
   display: flex;
   flex-direction: column;
 }
-#bground #form-modal .form-info label {
+#bGround #form-modal .form-info label {
   font-size: 24px;
 }
-#bground #form-modal input {
+#bGround #form-modal input {
   border: none;
   height: 40px;
   border-radius: 4px;
   margin-bottom: 8px;
 }
-#bground #form-modal #message {
+#bGround #form-modal #message {
   height: 120px;
   margin-bottom: 16px;
 }
-#bground #form-modal .button {
+#bGround #form-modal .button {
   width: 110px;
   color: white;
   background-color: #901C1C;
@@ -294,7 +294,7 @@ main .presentation .photograph .tag-all {
   border-radius: 6px 6px;
   padding: 14px 8px;
 }
-#bground #form-modal .button:hover {
+#bGround #form-modal .button:hover {
   color: black;
   background-color: #dc7b66;
   cursor: pointer;
@@ -539,18 +539,18 @@ fieldset.select-box {
     z-index: 2;
   }
 
-  #bground {
+  #bGround {
     z-index: 3;
   }
-  #bground #form-modal {
+  #bGround #form-modal {
     width: 88%;
     height: 100%;
     margin: 0;
   }
-  #bground #form-modal #message {
+  #bGround #form-modal #message {
     height: 200px;
   }
-  #bground #form-modal input.button {
+  #bGround #form-modal input.button {
     margin-left: auto;
     margin-right: auto;
     padding: 6px 24px;

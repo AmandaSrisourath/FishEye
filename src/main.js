@@ -16,6 +16,7 @@ const tags = data.tags;
 tags.forEach((tag) => {
     const nav = document.querySelector("#navigation");
     const link = document.createElement("a");
+    link.href = `index.html?tag=${tag}`;
     link.classList.add("tag");
     link.dataset.name = tag;
     link.innerHTML = `#${tag}`;
@@ -51,6 +52,7 @@ function createPhotographers(photographers) {
         const divTag = document.createElement("div");
         photographer.tags.forEach((tag) => {
             const link = document.createElement("a");
+            link.href = `index.html?tag=${tag}`;
             link.innerHTML = "#" + tag;
             link.classList.add("tag");
             link.addEventListener("click", function() {

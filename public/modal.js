@@ -3,14 +3,22 @@ var __webpack_exports__ = {};
 /*!**********************!*\
   !*** ./src/modal.js ***!
   \**********************/
-const modalbg = document.querySelector("#bground");
-const modalBtn = document.querySelector("#contact-btn");
-const closeModalBtn = document.querySelectorAll(".close-action");
+let lastFocusedElt;
 
+const modalBtn = document.querySelector("#contact-btn");
 modalBtn.addEventListener("click", launchModal);
 
+const modalBg = document.querySelector("#bGround");
 function launchModal() {
-    modalbg.style.display = "block";
+    lastFocusedElt = document.activeElement;
+    modalBg.style.display = "block";
+    modalBg.focus();
+}
+
+const closeModalBtn = document.querySelectorAll(".close-action");
+function closeModal() {
+    modalBg.style.display = "none";
+    lastFocusedElt.focus();
 }
 
 closeModalBtn.forEach((elt) => {
@@ -23,10 +31,6 @@ closeModalBtn.forEach((elt) => {
         }
     });
 });
-
-function closeModal() {
-    modalbg.style.display = "none";
-}
 /******/ })()
 ;
 //# sourceMappingURL=modal.js.map
