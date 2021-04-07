@@ -336,18 +336,17 @@ fieldset.select-box {
   width: 110px;
   box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  outline: none;
   padding: 0;
   border: none;
 }
-.select-box__current:focus + .select-box__list {
+.select-box__current.open-dropDown + .select-box__list {
   opacity: 1;
   animation-name: none;
 }
-.select-box__current:focus + .select-box__list .select-box__option {
+.select-box__current.open-dropDown + .select-box__list .select-box__option {
   cursor: pointer;
 }
-.select-box__current:focus .fa-chevron-down {
+.select-box__current.open-dropDown .fa-chevron-down {
   transform: translateY(-50%) rotate(180deg);
 }
 .select-box .fa-chevron-down {

@@ -205,7 +205,7 @@ function createMedias(medias) {
     const closeLightboxModal = document.querySelector("#close-lightbox");
     closeLightboxModal.addEventListener("click",(closeLightbox));
     closeLightboxModal.addEventListener("keydown", (event) => {
-       if (event.keyCode === 13 || event.keyCode ===32) {
+       if (event.keyCode === 13 || event.keyCode === 32) {
            closeLightbox();
        }
     });
@@ -215,7 +215,7 @@ function createMedias(medias) {
         previousImages();
     });
     prevSlide.addEventListener("keydown", (event) => {
-        if (event.keyCode === 13 || event.keyCode ===32) {
+        if (event.keyCode === 13 || event.keyCode === 32) {
             previousImages();
         }
     });
@@ -225,7 +225,7 @@ function createMedias(medias) {
         nextImages();
     });
     nextSlide.addEventListener("keydown", (event) => {
-        if (event.keyCode === 13 || event.keyCode ===32) {
+        if (event.keyCode === 13 || event.keyCode === 32) {
             nextImages();
         }
     });
@@ -244,9 +244,39 @@ function nextImages() {
     plusSlides(1);
 }
 
-const selects = document.querySelectorAll(".select-box__input");
+const openDropDown = document.querySelector("#filter-dropDown");
+openDropDown.addEventListener("click",() => {
+    switchDropDownOnEvent();
+});
 
-selects.forEach((input) => input.addEventListener("change",(event) => {
+const selects = document.querySelectorAll(".select-box__input");
+selects.forEach((elt) => {
+    elt.addEventListener("change",(event) => {
+        filterMedias(event);
+    });
+});
+const labels =  document.querySelectorAll(".select-box__option");
+labels.forEach((label) => {
+    label.addEventListener("keydown",(event)  => {
+        if (event.keyCode === 13 || event.keyCode === 32) {
+            label.click();
+        }
+    });
+});
+
+let dropDowIsOpen = false;
+
+function switchDropDownOnEvent() {
+    if (dropDowIsOpen) {
+        openDropDown.classList.remove("open-dropDown");
+        dropDowIsOpen = false;
+    } else {
+        dropDowIsOpen = true;
+        openDropDown.classList.add("open-dropDown");
+    }
+}
+
+function filterMedias(event) {
     const filter = event.target.value;
     if (filter === "date") {
         medias.sort((a, b) =>  {
@@ -262,7 +292,7 @@ selects.forEach((input) => input.addEventListener("change",(event) => {
         });
     }
     createMedias(medias);
-}));
+}
 
 function openModal() {
     lastFocusedElt = document.activeElement;
