@@ -11,3 +11,7 @@ body {
   margin-right: auto;
   font-family: 'abelregular', Arial, Helvetica, sans-serif;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
