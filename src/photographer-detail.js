@@ -53,7 +53,8 @@ function Factory() {
 }
 
 let Image = function (media) {
-    this.getHTML = `<img tabindex="0" alt="" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
+    this.getHTML = `<img tabindex="0" alt="${media.alt}" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.image}"/>`;
+    this.alt = media.alt;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
