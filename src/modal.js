@@ -26,3 +26,24 @@ closeModalBtn.forEach((elt) => {
         }
     });
 });
+
+function displayFormContent() {
+    const firstName = document.querySelector("#first-name");
+    console.log(firstName.value);
+    const lastName = document.querySelector("#last-name");
+    console.log(lastName.value);
+    const email = document.querySelector("#email");
+    console.log(email.value);
+    const message = document.querySelector("#message");
+    console.log(message.value);
+}
+
+const submitBtn = document.querySelector("#submit-btn");
+submitBtn.addEventListener("click", (event) => {
+    displayFormContent();
+    event.preventDefault();
+});
+submitBtn.addEventListener("keydown",(event) => {
+    displayFormContent();
+    event.preventDefault();
+});
