@@ -26,7 +26,7 @@ closeModalBtn.forEach((elt) => {
         closeModal();
     });
     elt.addEventListener("keydown", (event) => {
-        if (event.keyCode === 13 || event.keyCode === 32) {
+        if (event.keyCode === 13) {
             closeModal();
         }
     });

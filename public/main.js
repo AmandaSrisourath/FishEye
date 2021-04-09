@@ -72,7 +72,6 @@ if (selectedTag) {
 }
 
 const tags = _data_json__WEBPACK_IMPORTED_MODULE_0__.tags;
-
 tags.forEach((tag) => {
     const nav = document.querySelector("#navigation");
     const link = document.createElement("a");
@@ -103,7 +102,7 @@ function createPhotographers(photographers) {
                          </a>
                          <div>
                             <p class="location"> ${photographer.city}, ${photographer.country} </p>
-                            <p class="slogan" ${photographer.tagline} </p>
+                            <p class="slogan"> ${photographer.tagline} </p>
                             <p class="price"> ${photographer.price}€/jour </p>
                          </div>`;
         const divTag = document.createElement("div");

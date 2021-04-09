@@ -67,7 +67,7 @@ let Image = function (media) {
 };
 
 let Video = function (media) {
-    this.getHTML = `<video class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}" controls><source src="movie.mp4" type="video/mp4"></video>`;
+    this.getHTML = `<video title="${media.alt}" class="hover-shadow open-lightbox image" src="SamplePhotos/${media.photographerFirstName}/${media.video}" controls><source src="movie.mp4" type="video/mp4"></video>`;
     this.title = media.title;
     this.id = media.id;
     this.photographerFirstName = media.photographerFirstName;
@@ -137,7 +137,7 @@ function createMedias(medias) {
             openLightboxOnEvent(index);
         });
         elt.addEventListener("keydown", (event) => {
-            if (event.keyCode === 13 || event.keyCode ===32) {
+            if (event.keyCode === 13) {
                 openLightboxOnEvent(index);
             }
         });
@@ -146,7 +146,7 @@ function createMedias(medias) {
     const closeLightboxModal = document.querySelector("#close-lightbox");
     closeLightboxModal.addEventListener("click",(closeLightbox));
     closeLightboxModal.addEventListener("keydown", (event) => {
-       if (event.keyCode === 13 || event.keyCode === 32) {
+       if (event.keyCode === 13) {
            closeLightbox();
        }
     });
@@ -156,7 +156,7 @@ function createMedias(medias) {
         previousImages();
     });
     prevSlide.addEventListener("keydown", (event) => {
-        if (event.keyCode === 13 || event.keyCode === 32) {
+        if (event.keyCode === 13) {
             previousImages();
         }
     });
@@ -166,7 +166,7 @@ function createMedias(medias) {
         nextImages();
     });
     nextSlide.addEventListener("keydown", (event) => {
-        if (event.keyCode === 13 || event.keyCode === 32) {
+        if (event.keyCode === 13) {
             nextImages();
         }
     });
@@ -184,26 +184,6 @@ function previousImages() {
 function nextImages() {
     plusSlides(1);
 }
-
-const openDropDown = document.querySelector("#filter-dropDown");
-openDropDown.addEventListener("click",() => {
-    switchDropDownOnEvent();
-});
-
-const selects = document.querySelectorAll(".select-box__input");
-selects.forEach((elt) => {
-    elt.addEventListener("change",(event) => {
-        filterMedias(event);
-    });
-});
-const labels =  document.querySelectorAll(".select-box__option");
-labels.forEach((label) => {
-    label.addEventListener("keydown",(event)  => {
-        if (event.keyCode === 13 || event.keyCode === 32) {
-            label.click();
-        }
-    });
-});
 
 let dropDowIsOpen = false;
 
@@ -234,6 +214,26 @@ function filterMedias(event) {
     }
     createMedias(medias);
 }
+
+const openDropDown = document.querySelector("#filter-dropDown");
+openDropDown.addEventListener("click",() => {
+    switchDropDownOnEvent();
+});
+
+const selects = document.querySelectorAll(".select-box__input");
+selects.forEach((elt) => {
+    elt.addEventListener("change",(event) => {
+        filterMedias(event);
+    });
+});
+const labels =  document.querySelectorAll(".select-box__option");
+labels.forEach((label) => {
+    label.addEventListener("keydown",(event)  => {
+        if (event.keyCode === 13) {
+            label.click();
+        }
+    });
+});
 
 function openModal() {
     lastFocusedElt = document.activeElement;

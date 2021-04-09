@@ -12,7 +12,6 @@ if (selectedTag) {
 }
 
 const tags = data.tags;
-
 tags.forEach((tag) => {
     const nav = document.querySelector("#navigation");
     const link = document.createElement("a");
@@ -43,7 +42,7 @@ function createPhotographers(photographers) {
                          </a>
                          <div>
                             <p class="location"> ${photographer.city}, ${photographer.country} </p>
-                            <p class="slogan" ${photographer.tagline} </p>
+                            <p class="slogan"> ${photographer.tagline} </p>
                             <p class="price"> ${photographer.price}€/jour </p>
                          </div>`;
         const divTag = document.createElement("div");
