@@ -1,14 +1,14 @@
-var path = require('path');
+var path = require("path");
 
 module.exports = {
-    mode: 'production',
+    mode: "production",
     entry: {
-        main: './src/main.js',
-        modal: './src/modal.js',
-        "photographer-detail": './src/photographer-detail.js'
+        main: "./src/main.js",
+        modal: "./src/modal.js",
+        "photographer-detail": "./src/photographer-detail.js"
     },
     output: {
-        path: path.resolve(__dirname, 'public'),
-        filename: '[name].js',
+        path: path.resolve(__dirname, "public"),
+        filename: "[name].js",
     },
 };
