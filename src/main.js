@@ -17,7 +17,6 @@ tags.forEach((tag) => {
     const link = document.createElement("a");
     link.href = `index.html?tag=${tag}`;
     link.classList.add("tag");
-    link.dataset.name = tag;
     link.innerHTML = `#${tag}`;
     nav.appendChild(link);
 });
