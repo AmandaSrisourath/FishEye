@@ -286,6 +286,5 @@ likes.forEach((icon) => {
         let totalLikesNumberValue = totalLikes.innerHTML;
         totalLikesNumberValue++;
         totalLikes.innerHTML = totalLikesNumberValue;
-        console.log(totalLikesNumberValue);
     });
 });
