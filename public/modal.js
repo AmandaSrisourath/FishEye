@@ -1,1 +1,64 @@
-!function(){let e;document.querySelector("#contact-btn").addEventListener("click",(function(){e=document.activeElement,t.style.display="block",t.focus()}));const t=document.querySelector("#bGround");function o(){t.style.display="none",setTimeout((()=>e.focus()),10)}function n(){const e=document.querySelector("#first-name");console.log(e.value);const t=document.querySelector("#last-name");console.log(t.value);const o=document.querySelector("#email");console.log(o.value);const n=document.querySelector("#message");console.log(n.value)}document.querySelectorAll(".close-action").forEach((e=>{e.addEventListener("click",(()=>{o()})),e.addEventListener("keydown",(e=>{13===e.keyCode&&o()}))}));const c=document.querySelector("#submit-btn");c.addEventListener("click",(e=>{n(),e.preventDefault()})),c.addEventListener("keydown",(e=>{n(),e.preventDefault()}))}();
+/******/ (function() { // webpackBootstrap
+var __webpack_exports__ = {};
+/*!**********************!*\
+  !*** ./src/modal.js ***!
+  \**********************/
+let lastFocusedElt;
+const modalBtn = document.querySelector("#contact-btn");
+const modalBg = document.querySelector("#bGround");
+const closeModalBtn = document.querySelectorAll(".close-action");
+const submitBtn = document.querySelector("#submit-btn");
+
+modalBtn.addEventListener("click", launchModal);
+
+function launchModal() {
+    lastFocusedElt = document.activeElement;
+    modalBg.style.display = "block";
+    modalBg.focus();
+}
+
+function closeModal() {
+    modalBg.style.display = "none";
+    setTimeout(() => lastFocusedElt.focus(), 10);
+}
+
+function closeModalButton() {
+    closeModalBtn.forEach((elt) => {
+        elt.addEventListener("click",() => {
+            closeModal();
+        });
+        elt.addEventListener("keydown", (event) => {
+            if (event.keyCode === 13) {
+                closeModal();
+            }
+        });
+    });
+}
+
+function displayFormContent() {
+    const firstName = document.querySelector("#first-name");
+    console.log(firstName.value);
+    const lastName = document.querySelector("#last-name");
+    console.log(lastName.value);
+    const email = document.querySelector("#email");
+    console.log(email.value);
+    const message = document.querySelector("#message");
+    console.log(message.value);
+}
+
+function submitModal() {
+    submitBtn.addEventListener("click", (event) => {
+        displayFormContent();
+        event.preventDefault();
+    });
+    submitBtn.addEventListener("keydown",(event) => {
+        displayFormContent();
+        event.preventDefault();
+    });
+}
+
+closeModalButton();
+submitModal();
+/******/ })()
+;
+//# sourceMappingURL=modal.js.map

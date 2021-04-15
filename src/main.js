@@ -1,27 +1,25 @@
 import data from "./data.json";
 
-const urlParams = new URLSearchParams(window.location.search);
-const selectedTag = urlParams.get("tag");
-
-const photographers = data.photographers;
-
-if (selectedTag) {
-    filterAndCreatePhotographers(selectedTag);
-} else {
-    createPhotographers(photographers);
+function showPhotographers(selectedTag, photographers) {
+    if (selectedTag) {
+        filterAndCreatePhotographers(selectedTag, photographers);
+    } else {
+        createPhotographers(photographers);
+    }
 }
 
-const tags = data.tags;
-tags.forEach((tag) => {
-    const nav = document.querySelector("#navigation");
-    const link = document.createElement("a");
-    link.href = `index.html?tag=${tag}`;
-    link.classList.add("tag");
-    link.innerHTML = `#${tag}`;
-    nav.appendChild(link);
-});
+function showNavTags(tags) {
+    tags.forEach((tag) => {
+        const nav = document.querySelector("#navigation");
+        const link = document.createElement("a");
+        link.href = `index.html?tag=${tag}`;
+        link.classList.add("tag");
+        link.innerHTML = `#${tag}`;
+        nav.appendChild(link);
+    });
+}
 
-function filterAndCreatePhotographers(tag) {
+function filterAndCreatePhotographers(tag, photographers) {
     const photographersDiv = document.getElementById("photographers");
     photographersDiv.innerHTML = "";
 
@@ -56,3 +54,14 @@ function createPhotographers(photographers) {
         document.getElementById("photographers").appendChild(div);
     });
 }
+
+function run() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const selectedTag = urlParams.get("tag");
+    const photographers = data.photographers;
+    const tags = data.tags;
+    showPhotographers(selectedTag, photographers);
+    showNavTags(tags);
+}
+
+run();
